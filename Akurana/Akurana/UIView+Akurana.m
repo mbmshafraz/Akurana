@@ -2,6 +2,7 @@
 //  UIView+Akurana.m
 //  Akurana
 //
+
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -18,7 +19,6 @@
  */
 
 #import "UIView+Akurana.h"
-#import "UIImage+Akurana.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation UIView (Akurana)
@@ -83,45 +83,35 @@
     self.frame = frame;
 }
 
-- (CGFloat)borderWidh
+//- (void)setBackgroundColorWithImageName:(NSString *)imageName
+//{
+//    UIImage *image = [AKTheme getImage:imageName];
+//    [self setBackgroundColorWithImage:image];
+//}
+
+- (void)setBackgroundColorWithImage:(UIImage *)image
 {
-    return self.layer.borderWidth;
+    UIColor *color = [[UIColor alloc] initWithPatternImage:image];
+    self.backgroundColor = color;
 }
 
-- (void)setBorderWidh:(CGFloat)borderWidh
-{
-    self.layer.borderWidth = borderWidh;
-}
-
-- (CGColorRef)borderColor
-{
-    return self.layer.borderColor;
-}
-
-- (void)setBorderColor:(CGColorRef)borderColor
-{
-    self.layer.borderColor = borderColor;
-}
-
-- (CGFloat)cornerRadius
-{
-    return self.layer.cornerRadius;
+- (UIView*)firstViewOfClass:(Class)cls {
+    if ([self isKindOfClass:cls])
+        return self;
+    
+    for (UIView* child in self.subviews) {
+        UIView* it = [child firstViewOfClass:cls];
+        if (it)
+            return it;
+    }
+    
+    return nil;
 }
 
 - (void)setCornerRadius:(CGFloat)value
 {
     self.layer.cornerRadius = value;
     self.layer.masksToBounds = YES;
-}
-
-- (void)removeAllSubviews
-{
-    [[self subviews] makeObjectsPerformSelector: @selector(removeFromSuperview)];
-}
-
-- (void)setBackgroundImage:(UIImage*)image
-{
-    self.backgroundColor = [image patternColor];
 }
 
 @end

@@ -2,6 +2,7 @@
 //  UIToolbar+Akurana.m
 //  Akurana
 //
+
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -20,5 +21,28 @@
 #import "UIToolbar+Akurana.h"
 
 @implementation UIToolbar (Akurana)
+
+- (UIBarButtonItem*)itemWithTag:(NSInteger)tag {
+    for (UIBarButtonItem* button in self.items) {
+        if (button.tag == tag) {
+            return button;
+        }
+    }
+    return nil;
+}
+
+- (void)replaceItemWithTag:(NSInteger)tag withItem:(UIBarButtonItem*)item {
+    NSInteger index = 0;
+    for (UIBarButtonItem* button in self.items) {
+        if (button.tag == tag) {
+            NSMutableArray* newItems = [NSMutableArray arrayWithArray:self.items];
+            [newItems replaceObjectAtIndex:index withObject:item];
+            self.items = newItems;
+            break;
+        }
+        ++index;
+    }
+    
+}
 
 @end

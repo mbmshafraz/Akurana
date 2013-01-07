@@ -2,6 +2,7 @@
 //  UIToolbar+Akurana.h
 //  Akurana
 //
+
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -20,5 +21,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIToolbar (Akurana)
+
+- (void)replaceItemWithTag:(NSInteger)tag withItem:(UIBarButtonItem*)item;
 
 @end

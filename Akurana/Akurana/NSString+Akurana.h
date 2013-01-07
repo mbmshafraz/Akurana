@@ -2,6 +2,7 @@
 //  NSString+Akurana.h
 //  Akurana
 //
+
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -21,8 +22,9 @@
 
 @interface NSString (Akurana)
 
-- (NSString *)urlEncoded;
-- (int)hexValue;
-- (NSDate *)dateInFormat:(NSString*)format;
+- (NSString *) urlEncoded;
+- (int) hexValue;
+- (NSString *) removeCharacterSet:(NSCharacterSet *)charactorSet;
+- (NSString *) removeCharactersInString:(NSString *)charactors;
 
 @end

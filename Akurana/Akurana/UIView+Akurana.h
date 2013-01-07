@@ -2,6 +2,7 @@
 //  UIView+Akurana.h
 //  Akurana
 //
+
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -25,13 +26,13 @@
 @property(nonatomic) CGFloat top;
 @property(nonatomic) CGFloat right;
 @property(nonatomic) CGFloat bottom;
+
 @property(nonatomic) CGFloat width;
 @property(nonatomic) CGFloat height;
-@property(nonatomic) CGFloat borderWidh;
-@property(nonatomic) CGColorRef borderColor;
-@property(nonatomic) CGFloat cornerRadius;
 
-- (void)removeAllSubviews;
-- (void)setBackgroundImage:(UIImage*)image;
+- (UIView*)firstViewOfClass:(Class)cls;
+//- (void)setBackgroundColorWithImageName:(NSString *)imageName;
+- (void)setBackgroundColorWithImage:(UIImage *)image;
+- (void)setCornerRadius:(CGFloat)value;
 
 @end

@@ -2,6 +2,7 @@
 //  UINavigationController+Akurana.h
 //  Akurana
 //
+
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -20,5 +21,17 @@
 #import <UIKit/UIKit.h>
 
 @interface UINavigationController (Akurana)
+
+- (void)pushViewController:(UIViewController*)controller
+    animatedWithTransition:(UIViewAnimationTransition)transition
+    withTransitionDuration:(float)duration;
+
+- (void)pushViewController:(UIViewController*)controller
+    animatedWithTransition:(UIViewAnimationTransition)transition;
+
+- (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition
+                         withTransitionDuration:(float)duration;
+
+- (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition;
 
 @end

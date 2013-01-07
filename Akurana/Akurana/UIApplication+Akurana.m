@@ -1,5 +1,5 @@
 //
-//  UIButton+Akurana.h
+//  UIApplication+Akurana.m
 //  Akurana
 //
 
@@ -18,10 +18,14 @@
  
  */
 
-#import <UIKit/UIKit.h>
+#import "UIApplication+Akurana.h"
+#import "NSString+Akurana.h"
 
-@interface UIButton (Akurana)
+@implementation UIApplication (Akurana)
 
-- (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;
+- (void)call:(NSString*)number
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",[number removeCharactersInString:@"+0123456789"]]]];
+}
 
 @end

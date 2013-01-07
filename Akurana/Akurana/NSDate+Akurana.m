@@ -2,6 +2,7 @@
 //  NSDate+Akurana.m
 //  Akurana
 //
+
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -21,12 +22,21 @@
 
 @implementation NSDate (Akurana)
 
++ (NSDate*)dateFromString:(NSString *)dateString dateFormat:(NSString*)format
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:format];
+    NSDate *date = [dateFormatter dateFromString:dateString];
+    
+    return date;
+}
+
 - (NSString *)stringWithFormat:(NSString *)format
 {
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:format];
     NSString *dateString = [dateFormatter stringFromDate:self];
-    [dateFormatter release];
+
     return dateString;
 }
 

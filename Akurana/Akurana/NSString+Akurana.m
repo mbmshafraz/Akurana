@@ -2,6 +2,7 @@
 //  NSString+Akurana.m
 //  Akurana
 //
+
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -23,9 +24,13 @@
 
 -(NSString *) urlEncoded
 {
-    NSString *encoded = (NSString *)CFURLCreateStringByAddingPercentEscapes
-                        (NULL,(CFStringRef)self,NULL,(CFStringRef)@"!*'\"();@+$,%#[]% ",kCFStringEncodingUTF8 );
-    return [encoded autorelease];
+    NSString *encoded = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                                            NULL,
+                                                                            (CFStringRef)self,
+                                                                            NULL,
+                                                                            (CFStringRef)@"!*'\"();@+$,%#[]% ",
+                                                                            kCFStringEncodingUTF8 );
+    return encoded;
 }
 
 - (int) hexValue {
@@ -34,14 +39,16 @@
 	return n;
 }
 
-- (NSDate *)dateInFormat:(NSString*)format
+
+- (NSString *) removeCharacterSet:(NSCharacterSet *)charactorSet
 {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:format];
-    NSDate *date = [dateFormatter dateFromString:self];
-    [dateFormatter release];
-    
-    return date;
+    return [[self componentsSeparatedByCharactersInSet:charactorSet]componentsJoinedByString:@""];
+}
+
+- (NSString *) removeCharactersInString:(NSString *)charactors
+{
+    NSCharacterSet *characterSet = [[NSCharacterSet characterSetWithCharactersInString:charactors]invertedSet];
+    return [self removeCharacterSet:characterSet];
 }
 
 @end

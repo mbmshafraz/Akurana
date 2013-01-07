@@ -2,6 +2,7 @@
 //  UIImage+Akurana.m
 //  Akurana
 //
+
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -29,19 +30,6 @@
 	UIGraphicsEndImageContext();
 	
 	return newImage;
-}
-
-- (UIImage*)imageByCroppingToRect:(CGRect)rect
-{
-    CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], rect);
-    UIImage *cropped = [UIImage imageWithCGImage:imageRef];
-    return cropped;
-}
-
-- (UIColor *)patternColor
-{
-    UIColor *color = [[UIColor alloc] initWithPatternImage:self];
-    return [color autorelease];
 }
 
 + (UIImage *)imageWithColor:(UIColor *)color

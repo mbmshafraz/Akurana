@@ -2,6 +2,7 @@
 //  UINavigationController+Akurana.m
 //  Akurana
 //
+
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -19,6 +20,41 @@
 
 #import "UINavigationController+Akurana.h"
 
+#define AK_FLIP_TRANSITION_DURATION 0.7
+
 @implementation UINavigationController (Akurana)
 
+- (void)pushViewController:(UIViewController*)controller
+    animatedWithTransition:(UIViewAnimationTransition)transition
+{
+    [self pushViewController:controller animatedWithTransition:transition withTransitionDuration:AK_FLIP_TRANSITION_DURATION];
+}
+
+- (void)pushViewController:(UIViewController*)controller
+    animatedWithTransition:(UIViewAnimationTransition)transition withTransitionDuration:(float)duration{
+    
+    [self pushViewController:controller animated:NO];
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:duration];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationTransition:transition forView:self.view cache:YES];
+    [UIView commitAnimations];
+}
+
+- (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition
+{
+    [self popViewControllerAnimatedWithTransition:transition withTransitionDuration:AK_FLIP_TRANSITION_DURATION];
+}
+
+- (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition withTransitionDuration:(float)duration{
+    
+    [self popViewControllerAnimated:NO];
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:duration];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationTransition:transition forView:self.view cache:YES];
+    [UIView commitAnimations];
+}
 @end

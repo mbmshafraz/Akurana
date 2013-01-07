@@ -2,6 +2,7 @@
 //  NSDate+Akurana.h
 //  Akurana
 //
+
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -21,6 +22,7 @@
 
 @interface NSDate (Akurana)
 
++ (NSDate*)dateFromString:(NSString *)dateString dateFormat:(NSString*)format;
 - (NSString *)stringWithFormat:(NSString *)format;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  UIButton+Akurana.h
+//  UIApplication+Akurana.h
 //  Akurana
 //
 
@@ -20,8 +20,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIButton (Akurana)
+@interface UIApplication (Akurana)
 
-- (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;
+- (void)call:(NSString*)number;
 
 @end

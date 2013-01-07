@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27280365169AC6780014811B /* UIView+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 27280364169AC6780014811B /* UIView+Akurana.m */; };
+		27280369169AC6AB0014811B /* NSDate+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 27280368169AC6AB0014811B /* NSDate+Akurana.m */; };
+		2728036C169AC7240014811B /* UIButton+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 2728036B169AC7240014811B /* UIButton+Akurana.m */; };
+		2728036F169AC7A60014811B /* UIApplication+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 2728036E169AC7A60014811B /* UIApplication+Akurana.m */; };
 		272B8CC9169ABDBA00DBF54D /* NSObject+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CC8169ABDBA00DBF54D /* NSObject+Akurana.m */; };
+		272B8CCC169AC00100DBF54D /* NSString+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CCB169AC00100DBF54D /* NSString+Akurana.m */; };
+		272B8CCF169AC18600DBF54D /* UIColor+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CCE169AC18600DBF54D /* UIColor+Akurana.m */; };
+		272B8CD2169AC22300DBF54D /* UIImage+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CD1169AC22300DBF54D /* UIImage+Akurana.m */; };
+		272B8CD5169AC2C000DBF54D /* UIImageView+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CD4169AC2BF00DBF54D /* UIImageView+Akurana.m */; };
+		272B8CD8169AC49E00DBF54D /* UINavigationController+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CD7169AC49E00DBF54D /* UINavigationController+Akurana.m */; };
+		272B8CDB169AC5B600DBF54D /* UIToolbar+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CDA169AC5B600DBF54D /* UIToolbar+Akurana.m */; };
 		27E5A76B16969723008CE289 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5A76A16969723008CE289 /* Foundation.framework */; };
 		27E5A77016969723008CE289 /* Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27E5A76F16969723008CE289 /* Akurana.h */; };
 /* End PBXBuildFile section */
@@ -26,8 +36,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27280363169AC6780014811B /* UIView+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Akurana.h"; sourceTree = "<group>"; };
+		27280364169AC6780014811B /* UIView+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Akurana.m"; sourceTree = "<group>"; };
+		27280367169AC6AB0014811B /* NSDate+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Akurana.h"; sourceTree = "<group>"; };
+		27280368169AC6AB0014811B /* NSDate+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Akurana.m"; sourceTree = "<group>"; };
+		2728036A169AC7240014811B /* UIButton+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Akurana.h"; sourceTree = "<group>"; };
+		2728036B169AC7240014811B /* UIButton+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Akurana.m"; sourceTree = "<group>"; };
+		2728036D169AC7A60014811B /* UIApplication+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Akurana.h"; sourceTree = "<group>"; };
+		2728036E169AC7A60014811B /* UIApplication+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Akurana.m"; sourceTree = "<group>"; };
 		272B8CC7169ABDBA00DBF54D /* NSObject+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Akurana.h"; sourceTree = "<group>"; };
 		272B8CC8169ABDBA00DBF54D /* NSObject+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Akurana.m"; sourceTree = "<group>"; };
+		272B8CCA169AC00100DBF54D /* NSString+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Akurana.h"; sourceTree = "<group>"; };
+		272B8CCB169AC00100DBF54D /* NSString+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Akurana.m"; sourceTree = "<group>"; };
+		272B8CCD169AC18600DBF54D /* UIColor+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Akurana.h"; sourceTree = "<group>"; };
+		272B8CCE169AC18600DBF54D /* UIColor+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Akurana.m"; sourceTree = "<group>"; };
+		272B8CD0169AC22300DBF54D /* UIImage+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Akurana.h"; sourceTree = "<group>"; };
+		272B8CD1169AC22300DBF54D /* UIImage+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Akurana.m"; sourceTree = "<group>"; };
+		272B8CD3169AC2BF00DBF54D /* UIImageView+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Akurana.h"; sourceTree = "<group>"; };
+		272B8CD4169AC2BF00DBF54D /* UIImageView+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Akurana.m"; sourceTree = "<group>"; };
+		272B8CD6169AC49E00DBF54D /* UINavigationController+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Akurana.h"; sourceTree = "<group>"; };
+		272B8CD7169AC49E00DBF54D /* UINavigationController+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Akurana.m"; sourceTree = "<group>"; };
+		272B8CD9169AC5B600DBF54D /* UIToolbar+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+Akurana.h"; sourceTree = "<group>"; };
+		272B8CDA169AC5B600DBF54D /* UIToolbar+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+Akurana.m"; sourceTree = "<group>"; };
 		27E5A76716969723008CE289 /* libAkurana.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAkurana.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E5A76A16969723008CE289 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27E5A76E16969723008CE289 /* Akurana-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Akurana-Prefix.pch"; sourceTree = "<group>"; };
@@ -51,6 +81,26 @@
 			children = (
 				272B8CC7169ABDBA00DBF54D /* NSObject+Akurana.h */,
 				272B8CC8169ABDBA00DBF54D /* NSObject+Akurana.m */,
+				272B8CCA169AC00100DBF54D /* NSString+Akurana.h */,
+				272B8CCB169AC00100DBF54D /* NSString+Akurana.m */,
+				272B8CCD169AC18600DBF54D /* UIColor+Akurana.h */,
+				272B8CCE169AC18600DBF54D /* UIColor+Akurana.m */,
+				272B8CD0169AC22300DBF54D /* UIImage+Akurana.h */,
+				272B8CD1169AC22300DBF54D /* UIImage+Akurana.m */,
+				272B8CD3169AC2BF00DBF54D /* UIImageView+Akurana.h */,
+				272B8CD4169AC2BF00DBF54D /* UIImageView+Akurana.m */,
+				272B8CD6169AC49E00DBF54D /* UINavigationController+Akurana.h */,
+				272B8CD7169AC49E00DBF54D /* UINavigationController+Akurana.m */,
+				272B8CD9169AC5B600DBF54D /* UIToolbar+Akurana.h */,
+				272B8CDA169AC5B600DBF54D /* UIToolbar+Akurana.m */,
+				27280363169AC6780014811B /* UIView+Akurana.h */,
+				27280364169AC6780014811B /* UIView+Akurana.m */,
+				27280367169AC6AB0014811B /* NSDate+Akurana.h */,
+				27280368169AC6AB0014811B /* NSDate+Akurana.m */,
+				2728036A169AC7240014811B /* UIButton+Akurana.h */,
+				2728036B169AC7240014811B /* UIButton+Akurana.m */,
+				2728036D169AC7A60014811B /* UIApplication+Akurana.h */,
+				2728036E169AC7A60014811B /* UIApplication+Akurana.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -150,6 +200,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				272B8CC9169ABDBA00DBF54D /* NSObject+Akurana.m in Sources */,
+				272B8CCC169AC00100DBF54D /* NSString+Akurana.m in Sources */,
+				272B8CCF169AC18600DBF54D /* UIColor+Akurana.m in Sources */,
+				272B8CD2169AC22300DBF54D /* UIImage+Akurana.m in Sources */,
+				272B8CD5169AC2C000DBF54D /* UIImageView+Akurana.m in Sources */,
+				272B8CD8169AC49E00DBF54D /* UINavigationController+Akurana.m in Sources */,
+				272B8CDB169AC5B600DBF54D /* UIToolbar+Akurana.m in Sources */,
+				27280365169AC6780014811B /* UIView+Akurana.m in Sources */,
+				27280369169AC6AB0014811B /* NSDate+Akurana.m in Sources */,
+				2728036C169AC7240014811B /* UIButton+Akurana.m in Sources */,
+				2728036F169AC7A60014811B /* UIApplication+Akurana.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

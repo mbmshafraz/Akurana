@@ -19,4 +19,7 @@
  */
 
 #import <Foundation/Foundation.h>
+
 #import "NSObject+Akurana.h"
+#import "NSString+Akurana.h"
+#import "UIColor+Akurana.h"
