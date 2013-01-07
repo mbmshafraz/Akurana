@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272B8CC9169ABDBA00DBF54D /* NSObject+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CC8169ABDBA00DBF54D /* NSObject+Akurana.m */; };
 		27E5A76B16969723008CE289 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5A76A16969723008CE289 /* Foundation.framework */; };
 		27E5A77016969723008CE289 /* Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27E5A76F16969723008CE289 /* Akurana.h */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		272B8CC7169ABDBA00DBF54D /* NSObject+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Akurana.h"; sourceTree = "<group>"; };
+		272B8CC8169ABDBA00DBF54D /* NSObject+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Akurana.m"; sourceTree = "<group>"; };
 		27E5A76716969723008CE289 /* libAkurana.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAkurana.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E5A76A16969723008CE289 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27E5A76E16969723008CE289 /* Akurana-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Akurana-Prefix.pch"; sourceTree = "<group>"; };
@@ -43,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		272B8CAC169ABBED00DBF54D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				272B8CC7169ABDBA00DBF54D /* NSObject+Akurana.h */,
+				272B8CC8169ABDBA00DBF54D /* NSObject+Akurana.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		27E5A75C16969723008CE289 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				27E5A76F16969723008CE289 /* Akurana.h */,
+				272B8CAC169ABBED00DBF54D /* Categories */,
 				27E5A76D16969723008CE289 /* Supporting Files */,
 			);
 			path = Akurana;
@@ -136,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272B8CC9169ABDBA00DBF54D /* NSObject+Akurana.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
