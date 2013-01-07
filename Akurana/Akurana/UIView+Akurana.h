@@ -1,8 +1,7 @@
 //
-//  Akurana.h
+//  UIView+Akurana.h
 //  Akurana
 //
-
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -18,5 +17,21 @@
  
  */
 
-#import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+#import <UIKit/UIKit.h>
+
+@interface UIView (Akurana)
+
+@property(nonatomic) CGFloat left;
+@property(nonatomic) CGFloat top;
+@property(nonatomic) CGFloat right;
+@property(nonatomic) CGFloat bottom;
+@property(nonatomic) CGFloat width;
+@property(nonatomic) CGFloat height;
+@property(nonatomic) CGFloat borderWidh;
+@property(nonatomic) CGColorRef borderColor;
+@property(nonatomic) CGFloat cornerRadius;
+
+- (void)removeAllSubviews;
+- (void)setBackgroundImage:(UIImage*)image;
+
+@end

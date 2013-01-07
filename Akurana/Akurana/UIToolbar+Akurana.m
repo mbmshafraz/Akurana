@@ -1,8 +1,7 @@
 //
-//  Akurana.h
+//  UIToolbar+Akurana.m
 //  Akurana
 //
-
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -18,5 +17,8 @@
  
  */
 
-#import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+#import "UIToolbar+Akurana.h"
+
+@implementation UIToolbar (Akurana)
+
+@end

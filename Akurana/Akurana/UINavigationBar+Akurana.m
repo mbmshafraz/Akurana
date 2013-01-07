@@ -1,8 +1,7 @@
 //
-//  Akurana.h
+//  UINavigationBar+Akurana.m
 //  Akurana
 //
-
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -18,5 +17,8 @@
  
  */
 
-#import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+#import "UINavigationBar+Akurana.h"
+
+@implementation UINavigationBar (Akurana)
+
+@end

@@ -1,8 +1,7 @@
 //
-//  Akurana.h
+//  UIButton+Akurana.m
 //  Akurana
 //
-
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -18,5 +17,14 @@
  
  */
 
-#import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+#import "UIButton+Akurana.h"
+#import "UIImage+Akurana.h"
+
+@implementation UIButton (Akurana)
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state
+{
+    [self setBackgroundImage:[UIImage imageWithColor:backgroundColor] forState:state];
+}
+
+@end

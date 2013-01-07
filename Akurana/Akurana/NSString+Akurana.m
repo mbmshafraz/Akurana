@@ -1,8 +1,7 @@
 //
-//  Akurana.h
+//  NSString+Akurana.m
 //  Akurana
 //
-
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -18,5 +17,31 @@
  
  */
 
-#import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+#import "NSString+Akurana.h"
+
+@implementation NSString (Akurana)
+
+-(NSString *) urlEncoded
+{
+    NSString *encoded = (NSString *)CFURLCreateStringByAddingPercentEscapes
+                        (NULL,(CFStringRef)self,NULL,(CFStringRef)@"!*'\"();@+$,%#[]% ",kCFStringEncodingUTF8 );
+    return [encoded autorelease];
+}
+
+- (int) hexValue {
+	int n = 0;
+	sscanf([self UTF8String], "%x", &n);
+	return n;
+}
+
+- (NSDate *)dateInFormat:(NSString*)format
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:format];
+    NSDate *date = [dateFormatter dateFromString:self];
+    [dateFormatter release];
+    
+    return date;
+}
+
+@end

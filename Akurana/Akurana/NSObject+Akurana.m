@@ -1,5 +1,5 @@
 //
-//  Akurana.h
+//  NSObject+Akurana.m
 //  Akurana
 //
 
@@ -18,5 +18,17 @@
  
  */
 
-#import <Foundation/Foundation.h>
 #import "NSObject+Akurana.h"
+
+@implementation NSObject (Akurana)
+
+- (BOOL)isNull
+{
+    if ([self isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+@end

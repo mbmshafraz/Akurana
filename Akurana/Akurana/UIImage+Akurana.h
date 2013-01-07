@@ -1,8 +1,7 @@
 //
-//  Akurana.h
+//  UIImage+Akurana.h
 //  Akurana
 //
-
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -18,5 +17,14 @@
  
  */
 
-#import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+#import <UIKit/UIKit.h>
+
+@interface UIImage (Akurana)
+
+- (UIImage *)scaledImageFornewSize:(CGSize)newSize;
+- (UIImage *)imageByCroppingToRect:(CGRect)rect;
+- (UIColor *)patternColor;
++ (UIImage *)imageWithColor:(UIColor *)color;
++ (UIImage *)imageWithColor:(UIColor *)color withFrame:(CGRect)frame;
+
+@end

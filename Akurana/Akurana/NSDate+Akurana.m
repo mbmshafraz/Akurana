@@ -1,8 +1,7 @@
 //
-//  Akurana.h
+//  NSDate+Akurana.m
 //  Akurana
 //
-
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -18,5 +17,17 @@
  
  */
 
-#import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+#import "NSDate+Akurana.h"
+
+@implementation NSDate (Akurana)
+
+- (NSString *)stringWithFormat:(NSString *)format
+{
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:format];
+    NSString *dateString = [dateFormatter stringFromDate:self];
+    [dateFormatter release];
+    return dateString;
+}
+
+@end

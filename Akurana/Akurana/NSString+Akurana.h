@@ -1,8 +1,7 @@
 //
-//  Akurana.h
+//  NSString+Akurana.h
 //  Akurana
 //
-
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -19,4 +18,11 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+
+@interface NSString (Akurana)
+
+- (NSString *)urlEncoded;
+- (int)hexValue;
+- (NSDate *)dateInFormat:(NSString*)format;
+
+@end

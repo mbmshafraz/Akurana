@@ -1,8 +1,7 @@
 //
-//  Akurana.h
+//  UIColor+Akurana.h
 //  Akurana
 //
-
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -18,5 +17,11 @@
  
  */
 
-#import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+#import <UIKit/UIKit.h>
+
+@interface UIColor (Akurana)
+
++ (UIColor *)colorWithRGBA:(NSUInteger) rgba;
++ (UIColor *)colorWithRGB:(NSUInteger) rgb;
+
+@end

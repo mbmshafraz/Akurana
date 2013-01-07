@@ -1,8 +1,7 @@
 //
-//  Akurana.h
+//  UIImage+Akurana.m
 //  Akurana
 //
-
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -18,5 +17,52 @@
  
  */
 
-#import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+#import "UIImage+Akurana.h"
+
+@implementation UIImage (Akurana)
+
+- (UIImage*)scaledImageFornewSize:(CGSize)newSize
+{
+	UIGraphicsBeginImageContext( newSize );
+	[self drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+	UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	return newImage;
+}
+
+- (UIImage*)imageByCroppingToRect:(CGRect)rect
+{
+    CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], rect);
+    UIImage *cropped = [UIImage imageWithCGImage:imageRef];
+    return cropped;
+}
+
+- (UIColor *)patternColor
+{
+    UIColor *color = [[UIColor alloc] initWithPatternImage:self];
+    return [color autorelease];
+}
+
++ (UIImage *)imageWithColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    return [UIImage imageWithColor:color withFrame:rect];
+}
+
++ (UIImage *)imageWithColor:(UIColor *)color withFrame:(CGRect)frame
+{
+    
+    UIGraphicsBeginImageContext(frame.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, frame);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+@end

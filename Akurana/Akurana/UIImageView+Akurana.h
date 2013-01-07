@@ -1,8 +1,7 @@
 //
-//  Akurana.h
+//  UIImageView+Akurana.h
 //  Akurana
 //
-
 /*
  This project/library Akurana has given name of the vilage where developer of the project born
  
@@ -18,5 +17,10 @@
  
  */
 
-#import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+#import <UIKit/UIKit.h>
+
+@interface UIImageView (Akurana)
+
+- (void)setImageWithoutStrach:(UIImage *)image;
+
+@end

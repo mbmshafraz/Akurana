@@ -1,5 +1,5 @@
 //
-//  Akurana.h
+//  NSObject+Akurana.h
 //  Akurana
 //
 
@@ -19,4 +19,11 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "NSObject+Akurana.h"
+
+@interface NSObject (Akurana)
+
+/* This method will check whether the object is kind of NSNull */
+
+- (BOOL)isNull;
+
+@end
