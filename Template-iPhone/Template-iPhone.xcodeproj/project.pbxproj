@@ -355,6 +355,7 @@
 				27E5A7CF169697A0008CE289 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
