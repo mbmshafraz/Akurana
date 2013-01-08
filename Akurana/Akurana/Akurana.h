@@ -23,3 +23,12 @@
 #import "NSObject+Akurana.h"
 #import "NSString+Akurana.h"
 #import "UIColor+Akurana.h"
+#import "UIImage+Akurana.h"
+#import "UIImageView+Akurana.h"
+#import "UINavigationController+Akurana.h"
+#import "UIToolbar+Akurana.h"
+#import "UIView+Akurana.h"
+#import "NSDate+Akurana.h"
+#import "UIButton+Akurana.h"
+#import "UIApplication+Akurana.h"
+

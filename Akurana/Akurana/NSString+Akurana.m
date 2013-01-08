@@ -24,13 +24,12 @@
 
 -(NSString *) urlEncoded
 {
-    NSString *encoded = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(
-                                                                            NULL,
-                                                                            (CFStringRef)self,
+    CFStringRef encodedCfStringRef = CFURLCreateStringByAddingPercentEscapes(NULL,(CFStringRef)self,
                                                                             NULL,
                                                                             (CFStringRef)@"!*'\"();@+$,%#[]% ",
                                                                             kCFStringEncodingUTF8 );
-    return encoded;
+    NSString *endcodedString = (NSString *)CFBridgingRelease(encodedCfStringRef);
+    return endcodedString;
 }
 
 - (int) hexValue {

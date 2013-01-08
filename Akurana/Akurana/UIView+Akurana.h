@@ -31,7 +31,7 @@
 @property(nonatomic) CGFloat height;
 
 - (UIView*)firstViewOfClass:(Class)cls;
-//- (void)setBackgroundColorWithImageName:(NSString *)imageName;
+- (void)setBackgroundColorWithImageName:(NSString *)imageName;
 - (void)setBackgroundColorWithImage:(UIImage *)image;
 - (void)setCornerRadius:(CGFloat)value;
 

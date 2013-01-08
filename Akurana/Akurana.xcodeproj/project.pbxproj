@@ -11,6 +11,17 @@
 		27280369169AC6AB0014811B /* NSDate+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 27280368169AC6AB0014811B /* NSDate+Akurana.m */; };
 		2728036C169AC7240014811B /* UIButton+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 2728036B169AC7240014811B /* UIButton+Akurana.m */; };
 		2728036F169AC7A60014811B /* UIApplication+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 2728036E169AC7A60014811B /* UIApplication+Akurana.m */; };
+		2728038B169AE7090014811B /* NSObject+Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 272B8CC7169ABDBA00DBF54D /* NSObject+Akurana.h */; };
+		2728038D169AE7090014811B /* NSString+Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 272B8CCA169AC00100DBF54D /* NSString+Akurana.h */; };
+		2728038F169AE7090014811B /* UIColor+Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 272B8CCD169AC18600DBF54D /* UIColor+Akurana.h */; };
+		27280391169AE7090014811B /* UIImage+Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 272B8CD0169AC22300DBF54D /* UIImage+Akurana.h */; };
+		27280393169AE7090014811B /* UIImageView+Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 272B8CD3169AC2BF00DBF54D /* UIImageView+Akurana.h */; };
+		27280395169AE7090014811B /* UINavigationController+Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 272B8CD6169AC49E00DBF54D /* UINavigationController+Akurana.h */; };
+		27280397169AE7090014811B /* UIToolbar+Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 272B8CD9169AC5B600DBF54D /* UIToolbar+Akurana.h */; };
+		27280399169AE7090014811B /* UIView+Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27280363169AC6780014811B /* UIView+Akurana.h */; };
+		2728039B169AE7090014811B /* NSDate+Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27280367169AC6AB0014811B /* NSDate+Akurana.h */; };
+		2728039D169AE7090014811B /* UIButton+Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2728036A169AC7240014811B /* UIButton+Akurana.h */; };
+		2728039F169AE7090014811B /* UIApplication+Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2728036D169AC7A60014811B /* UIApplication+Akurana.h */; };
 		272B8CC9169ABDBA00DBF54D /* NSObject+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CC8169ABDBA00DBF54D /* NSObject+Akurana.m */; };
 		272B8CCC169AC00100DBF54D /* NSString+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CCB169AC00100DBF54D /* NSString+Akurana.m */; };
 		272B8CCF169AC18600DBF54D /* UIColor+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CCE169AC18600DBF54D /* UIColor+Akurana.m */; };
@@ -29,6 +40,17 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				2728038B169AE7090014811B /* NSObject+Akurana.h in CopyFiles */,
+				2728038D169AE7090014811B /* NSString+Akurana.h in CopyFiles */,
+				2728038F169AE7090014811B /* UIColor+Akurana.h in CopyFiles */,
+				27280391169AE7090014811B /* UIImage+Akurana.h in CopyFiles */,
+				27280393169AE7090014811B /* UIImageView+Akurana.h in CopyFiles */,
+				27280395169AE7090014811B /* UINavigationController+Akurana.h in CopyFiles */,
+				27280397169AE7090014811B /* UIToolbar+Akurana.h in CopyFiles */,
+				27280399169AE7090014811B /* UIView+Akurana.h in CopyFiles */,
+				2728039B169AE7090014811B /* NSDate+Akurana.h in CopyFiles */,
+				2728039D169AE7090014811B /* UIButton+Akurana.h in CopyFiles */,
+				2728039F169AE7090014811B /* UIApplication+Akurana.h in CopyFiles */,
 				27E5A77016969723008CE289 /* Akurana.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +293,7 @@
 				DSTROOT = /tmp/Akurana.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Akurana/Akurana-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
@@ -285,7 +307,7 @@
 				DSTROOT = /tmp/Akurana.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Akurana/Akurana-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";

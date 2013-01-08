@@ -83,11 +83,10 @@
     self.frame = frame;
 }
 
-//- (void)setBackgroundColorWithImageName:(NSString *)imageName
-//{
-//    UIImage *image = [AKTheme getImage:imageName];
-//    [self setBackgroundColorWithImage:image];
-//}
+- (void)setBackgroundColorWithImageName:(NSString *)imageName
+{
+    [self setBackgroundColorWithImage:[UIImage imageNamed:imageName]];
+}
 
 - (void)setBackgroundColorWithImage:(UIImage *)image
 {
