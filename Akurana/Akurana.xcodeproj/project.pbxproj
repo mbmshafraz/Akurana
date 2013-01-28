@@ -29,6 +29,22 @@
 		272B8CD5169AC2C000DBF54D /* UIImageView+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CD4169AC2BF00DBF54D /* UIImageView+Akurana.m */; };
 		272B8CD8169AC49E00DBF54D /* UINavigationController+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CD7169AC49E00DBF54D /* UINavigationController+Akurana.m */; };
 		272B8CDB169AC5B600DBF54D /* UIToolbar+Akurana.m in Sources */ = {isa = PBXBuildFile; fileRef = 272B8CDA169AC5B600DBF54D /* UIToolbar+Akurana.m */; };
+		2789E2D616B674FE00CC02C4 /* AKImageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2D516B674FE00CC02C4 /* AKImageEntity.m */; };
+		2789E2F516B675FB00CC02C4 /* AKPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2D816B675FB00CC02C4 /* AKPageView.m */; };
+		2789E2F616B675FB00CC02C4 /* AKGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2DA16B675FB00CC02C4 /* AKGridView.m */; };
+		2789E2F716B675FB00CC02C4 /* AKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2DC16B675FB00CC02C4 /* AKImageView.m */; };
+		2789E2F816B675FB00CC02C4 /* AKMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2DE16B675FB00CC02C4 /* AKMapAnnotation.m */; };
+		2789E2F916B675FB00CC02C4 /* AKMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2E016B675FB00CC02C4 /* AKMoreViewController.m */; };
+		2789E2FA16B675FB00CC02C4 /* AKRoundButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2E216B675FB00CC02C4 /* AKRoundButton.m */; };
+		2789E2FB16B675FB00CC02C4 /* AKScrollerbleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2E416B675FB00CC02C4 /* AKScrollerbleTextView.m */; };
+		2789E2FC16B675FB00CC02C4 /* AKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2E616B675FB00CC02C4 /* AKTableViewController.m */; };
+		2789E2FD16B675FB00CC02C4 /* AKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2E816B675FB00CC02C4 /* AKTextView.m */; };
+		2789E2FE16B675FB00CC02C4 /* AKTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2EA16B675FB00CC02C4 /* AKTheme.m */; };
+		2789E2FF16B675FB00CC02C4 /* AKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2EC16B675FB00CC02C4 /* AKViewController.m */; };
+		2789E30016B675FB00CC02C4 /* AKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2EE16B675FB00CC02C4 /* AKWebViewController.m */; };
+		2789E30116B675FB00CC02C4 /* AKGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2F016B675FB00CC02C4 /* AKGridViewController.m */; };
+		2789E30216B675FB00CC02C4 /* AKSegmentedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2F216B675FB00CC02C4 /* AKSegmentedController.m */; };
+		2789E30316B675FB00CC02C4 /* AKSegmentedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E2F416B675FB00CC02C4 /* AKSegmentedButton.m */; };
 		27E5A76B16969723008CE289 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5A76A16969723008CE289 /* Foundation.framework */; };
 		27E5A77016969723008CE289 /* Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27E5A76F16969723008CE289 /* Akurana.h */; };
 /* End PBXBuildFile section */
@@ -80,6 +96,38 @@
 		272B8CD7169AC49E00DBF54D /* UINavigationController+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Akurana.m"; sourceTree = "<group>"; };
 		272B8CD9169AC5B600DBF54D /* UIToolbar+Akurana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+Akurana.h"; sourceTree = "<group>"; };
 		272B8CDA169AC5B600DBF54D /* UIToolbar+Akurana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+Akurana.m"; sourceTree = "<group>"; };
+		2789E2D416B674FE00CC02C4 /* AKImageEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKImageEntity.h; sourceTree = "<group>"; };
+		2789E2D516B674FE00CC02C4 /* AKImageEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKImageEntity.m; sourceTree = "<group>"; };
+		2789E2D716B675FB00CC02C4 /* AKPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPageView.h; sourceTree = "<group>"; };
+		2789E2D816B675FB00CC02C4 /* AKPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPageView.m; sourceTree = "<group>"; };
+		2789E2D916B675FB00CC02C4 /* AKGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKGridView.h; sourceTree = "<group>"; };
+		2789E2DA16B675FB00CC02C4 /* AKGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKGridView.m; sourceTree = "<group>"; };
+		2789E2DB16B675FB00CC02C4 /* AKImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKImageView.h; sourceTree = "<group>"; };
+		2789E2DC16B675FB00CC02C4 /* AKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKImageView.m; sourceTree = "<group>"; };
+		2789E2DD16B675FB00CC02C4 /* AKMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMapAnnotation.h; sourceTree = "<group>"; };
+		2789E2DE16B675FB00CC02C4 /* AKMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMapAnnotation.m; sourceTree = "<group>"; };
+		2789E2DF16B675FB00CC02C4 /* AKMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMoreViewController.h; sourceTree = "<group>"; };
+		2789E2E016B675FB00CC02C4 /* AKMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMoreViewController.m; sourceTree = "<group>"; };
+		2789E2E116B675FB00CC02C4 /* AKRoundButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKRoundButton.h; sourceTree = "<group>"; };
+		2789E2E216B675FB00CC02C4 /* AKRoundButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKRoundButton.m; sourceTree = "<group>"; };
+		2789E2E316B675FB00CC02C4 /* AKScrollerbleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKScrollerbleTextView.h; sourceTree = "<group>"; };
+		2789E2E416B675FB00CC02C4 /* AKScrollerbleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKScrollerbleTextView.m; sourceTree = "<group>"; };
+		2789E2E516B675FB00CC02C4 /* AKTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTableViewController.h; sourceTree = "<group>"; };
+		2789E2E616B675FB00CC02C4 /* AKTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKTableViewController.m; sourceTree = "<group>"; };
+		2789E2E716B675FB00CC02C4 /* AKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTextView.h; sourceTree = "<group>"; };
+		2789E2E816B675FB00CC02C4 /* AKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKTextView.m; sourceTree = "<group>"; };
+		2789E2E916B675FB00CC02C4 /* AKTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKTheme.h; sourceTree = "<group>"; };
+		2789E2EA16B675FB00CC02C4 /* AKTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKTheme.m; sourceTree = "<group>"; };
+		2789E2EB16B675FB00CC02C4 /* AKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKViewController.h; sourceTree = "<group>"; };
+		2789E2EC16B675FB00CC02C4 /* AKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKViewController.m; sourceTree = "<group>"; };
+		2789E2ED16B675FB00CC02C4 /* AKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKWebViewController.h; sourceTree = "<group>"; };
+		2789E2EE16B675FB00CC02C4 /* AKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKWebViewController.m; sourceTree = "<group>"; };
+		2789E2EF16B675FB00CC02C4 /* AKGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKGridViewController.h; sourceTree = "<group>"; };
+		2789E2F016B675FB00CC02C4 /* AKGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKGridViewController.m; sourceTree = "<group>"; };
+		2789E2F116B675FB00CC02C4 /* AKSegmentedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKSegmentedController.h; sourceTree = "<group>"; };
+		2789E2F216B675FB00CC02C4 /* AKSegmentedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKSegmentedController.m; sourceTree = "<group>"; };
+		2789E2F316B675FB00CC02C4 /* AKSegmentedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKSegmentedButton.h; sourceTree = "<group>"; };
+		2789E2F416B675FB00CC02C4 /* AKSegmentedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKSegmentedButton.m; sourceTree = "<group>"; };
 		27E5A76716969723008CE289 /* libAkurana.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAkurana.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E5A76A16969723008CE289 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27E5A76E16969723008CE289 /* Akurana-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Akurana-Prefix.pch"; sourceTree = "<group>"; };
@@ -127,6 +175,45 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		2789E2D216B674D600CC02C4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2789E2D416B674FE00CC02C4 /* AKImageEntity.h */,
+				2789E2D516B674FE00CC02C4 /* AKImageEntity.m */,
+				2789E2D716B675FB00CC02C4 /* AKPageView.h */,
+				2789E2D816B675FB00CC02C4 /* AKPageView.m */,
+				2789E2D916B675FB00CC02C4 /* AKGridView.h */,
+				2789E2DA16B675FB00CC02C4 /* AKGridView.m */,
+				2789E2DB16B675FB00CC02C4 /* AKImageView.h */,
+				2789E2DC16B675FB00CC02C4 /* AKImageView.m */,
+				2789E2DD16B675FB00CC02C4 /* AKMapAnnotation.h */,
+				2789E2DE16B675FB00CC02C4 /* AKMapAnnotation.m */,
+				2789E2DF16B675FB00CC02C4 /* AKMoreViewController.h */,
+				2789E2E016B675FB00CC02C4 /* AKMoreViewController.m */,
+				2789E2E116B675FB00CC02C4 /* AKRoundButton.h */,
+				2789E2E216B675FB00CC02C4 /* AKRoundButton.m */,
+				2789E2E316B675FB00CC02C4 /* AKScrollerbleTextView.h */,
+				2789E2E416B675FB00CC02C4 /* AKScrollerbleTextView.m */,
+				2789E2E516B675FB00CC02C4 /* AKTableViewController.h */,
+				2789E2E616B675FB00CC02C4 /* AKTableViewController.m */,
+				2789E2E716B675FB00CC02C4 /* AKTextView.h */,
+				2789E2E816B675FB00CC02C4 /* AKTextView.m */,
+				2789E2E916B675FB00CC02C4 /* AKTheme.h */,
+				2789E2EA16B675FB00CC02C4 /* AKTheme.m */,
+				2789E2EB16B675FB00CC02C4 /* AKViewController.h */,
+				2789E2EC16B675FB00CC02C4 /* AKViewController.m */,
+				2789E2ED16B675FB00CC02C4 /* AKWebViewController.h */,
+				2789E2EE16B675FB00CC02C4 /* AKWebViewController.m */,
+				2789E2EF16B675FB00CC02C4 /* AKGridViewController.h */,
+				2789E2F016B675FB00CC02C4 /* AKGridViewController.m */,
+				2789E2F116B675FB00CC02C4 /* AKSegmentedController.h */,
+				2789E2F216B675FB00CC02C4 /* AKSegmentedController.m */,
+				2789E2F316B675FB00CC02C4 /* AKSegmentedButton.h */,
+				2789E2F416B675FB00CC02C4 /* AKSegmentedButton.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		27E5A75C16969723008CE289 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				27E5A76F16969723008CE289 /* Akurana.h */,
+				2789E2D216B674D600CC02C4 /* UI */,
 				272B8CAC169ABBED00DBF54D /* Categories */,
 				27E5A76D16969723008CE289 /* Supporting Files */,
 			);
@@ -232,6 +320,22 @@
 				27280369169AC6AB0014811B /* NSDate+Akurana.m in Sources */,
 				2728036C169AC7240014811B /* UIButton+Akurana.m in Sources */,
 				2728036F169AC7A60014811B /* UIApplication+Akurana.m in Sources */,
+				2789E2D616B674FE00CC02C4 /* AKImageEntity.m in Sources */,
+				2789E2F516B675FB00CC02C4 /* AKPageView.m in Sources */,
+				2789E2F616B675FB00CC02C4 /* AKGridView.m in Sources */,
+				2789E2F716B675FB00CC02C4 /* AKImageView.m in Sources */,
+				2789E2F816B675FB00CC02C4 /* AKMapAnnotation.m in Sources */,
+				2789E2F916B675FB00CC02C4 /* AKMoreViewController.m in Sources */,
+				2789E2FA16B675FB00CC02C4 /* AKRoundButton.m in Sources */,
+				2789E2FB16B675FB00CC02C4 /* AKScrollerbleTextView.m in Sources */,
+				2789E2FC16B675FB00CC02C4 /* AKTableViewController.m in Sources */,
+				2789E2FD16B675FB00CC02C4 /* AKTextView.m in Sources */,
+				2789E2FE16B675FB00CC02C4 /* AKTheme.m in Sources */,
+				2789E2FF16B675FB00CC02C4 /* AKViewController.m in Sources */,
+				2789E30016B675FB00CC02C4 /* AKWebViewController.m in Sources */,
+				2789E30116B675FB00CC02C4 /* AKGridViewController.m in Sources */,
+				2789E30216B675FB00CC02C4 /* AKSegmentedController.m in Sources */,
+				2789E30316B675FB00CC02C4 /* AKSegmentedButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
