@@ -21,6 +21,9 @@
 
 @interface UIApplication (Akurana)
 
-- (void)call:(NSString*)number;
+/*
+ * Dials to given number in string formate 
+ */
+- (void)dial:(NSString*)number;
 
 @end

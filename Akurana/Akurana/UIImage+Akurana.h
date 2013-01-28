@@ -21,8 +21,24 @@
 
 @interface UIImage (Akurana)
 
+/*
+ * Return Image with new Scall
+ */
 - (UIImage *)scaledImageFornewSize:(CGSize)newSize;
+
+/*
+ * Return Croped Image with given frame
+ */
+- (UIImage*)cropToFrame:(CGRect)frame;
+
+/*
+ * Creates one pixel image with given color
+ */
 + (UIImage *)imageWithColor:(UIColor *)color;
+
+/*
+ * Creates image with given color and given size
+ */
 + (UIImage *)imageWithColor:(UIColor *)color withFrame:(CGRect)frame;
 
 @end

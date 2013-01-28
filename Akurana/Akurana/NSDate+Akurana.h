@@ -21,7 +21,14 @@
 
 @interface NSDate (Akurana)
 
+/*
+ * Convert string to date with given formate
+ */
 + (NSDate*)dateFromString:(NSString *)dateString dateFormat:(NSString*)format;
+
+/*
+ * Covert Date object to string with given formate
+ */
 - (NSString *)stringWithFormat:(NSString *)format;
 
 @end

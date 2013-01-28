@@ -21,6 +21,9 @@
 
 @interface UIImageView (Akurana)
 
+/*
+ * Set Images without strach but changes frame scale of Image vies to fit to images scale
+ */
 - (void)setImageWithoutStrach:(UIImage *)image;
 
 @end

@@ -21,9 +21,24 @@
 
 @interface NSString (Akurana)
 
+/*
+ * Encode string to URL compatible formate
+ */
 - (NSString *) urlEncoded;
+
+/*
+ * returns intiger value of hex number in String formate
+ */
 - (int) hexValue;
+
+/*
+ * Removes given charactor set from the string 
+ */
 - (NSString *) removeCharacterSet:(NSCharacterSet *)charactorSet;
+
+/*
+ * Removes charactors in given charactor set from the string
+ */
 - (NSString *) removeCharactersInString:(NSString *)charactors;
 
 @end

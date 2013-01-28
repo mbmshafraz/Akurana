@@ -21,7 +21,15 @@
 
 @interface UIColor (Akurana)
 
+/*
+ * Return color for RGB and Alpha Eg: OxBAFFABFD
+ * OxBAFFAB - RGB value and FD Alph
+ */
 + (UIColor *)colorWithRGBA:(NSUInteger) rgba;
+
+/*
+ * Return color for RGB  Eg: OxBAFFAB
+ */
 + (UIColor *)colorWithRGB:(NSUInteger) rgb;
 
 @end

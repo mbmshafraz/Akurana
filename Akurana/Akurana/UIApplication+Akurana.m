@@ -22,7 +22,7 @@
 
 @implementation UIApplication (Akurana)
 
-- (void)call:(NSString*)number
+- (void)dial:(NSString*)number
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",[number removeCharactersInString:@"+0123456789"]]]];
 }

@@ -31,6 +31,21 @@
 	return newImage;
 }
 
+- (UIImage*)cropToFrame:(CGRect)frame
+{
+    UIGraphicsBeginImageContext(frame.size);
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    
+    CGRect clippedRect = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    CGContextClipToRect( currentContext, clippedRect);
+    
+    CGContextDrawImage(currentContext, frame, self.CGImage);
+    UIImage *croppedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return croppedImage;
+}
+
 + (UIImage *)imageWithColor:(UIColor *)color
 {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
@@ -51,5 +66,6 @@
     
     return image;
 }
+
 
 @end
