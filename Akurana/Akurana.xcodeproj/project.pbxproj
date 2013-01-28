@@ -71,6 +71,11 @@
 		2789E35916B67C1000CC02C4 /* AKGridViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2789E34016B67BD000CC02C4 /* AKGridViewController.h */; };
 		2789E35A16B67C1000CC02C4 /* AKSegmentedController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2789E34216B67BD000CC02C4 /* AKSegmentedController.h */; };
 		2789E35B16B67C1000CC02C4 /* AKSegmentedButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2789E34416B67BD000CC02C4 /* AKSegmentedButton.h */; };
+		2789E36116B6801600CC02C4 /* AKAppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E35E16B6801400CC02C4 /* AKAppConfig.m */; };
+		2789E36216B6801600CC02C4 /* AKAppSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E36016B6801500CC02C4 /* AKAppSandbox.m */; };
+		2789E36316B6803600CC02C4 /* AKGlobal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2789E35C16B67FDA00CC02C4 /* AKGlobal.h */; };
+		2789E36416B6803600CC02C4 /* AKAppConfig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2789E35D16B6801300CC02C4 /* AKAppConfig.h */; };
+		2789E36516B6803600CC02C4 /* AKAppSandbox.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2789E35F16B6801500CC02C4 /* AKAppSandbox.h */; };
 		27E5A76B16969723008CE289 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5A76A16969723008CE289 /* Foundation.framework */; };
 		27E5A77016969723008CE289 /* Akurana.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27E5A76F16969723008CE289 /* Akurana.h */; };
 /* End PBXBuildFile section */
@@ -82,6 +87,9 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				2789E36316B6803600CC02C4 /* AKGlobal.h in CopyFiles */,
+				2789E36416B6803600CC02C4 /* AKAppConfig.h in CopyFiles */,
+				2789E36516B6803600CC02C4 /* AKAppSandbox.h in CopyFiles */,
 				2789E35116B67C1000CC02C4 /* AKMoreViewController.h in CopyFiles */,
 				2789E35216B67C1000CC02C4 /* AKRoundButton.h in CopyFiles */,
 				2789E35316B67C1000CC02C4 /* AKScrollerbleTextView.h in CopyFiles */,
@@ -189,6 +197,11 @@
 		2789E34316B67BD000CC02C4 /* AKSegmentedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKSegmentedController.m; sourceTree = "<group>"; };
 		2789E34416B67BD000CC02C4 /* AKSegmentedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKSegmentedButton.h; sourceTree = "<group>"; };
 		2789E34516B67BD100CC02C4 /* AKSegmentedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKSegmentedButton.m; sourceTree = "<group>"; };
+		2789E35C16B67FDA00CC02C4 /* AKGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKGlobal.h; sourceTree = "<group>"; };
+		2789E35D16B6801300CC02C4 /* AKAppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKAppConfig.h; sourceTree = "<group>"; };
+		2789E35E16B6801400CC02C4 /* AKAppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKAppConfig.m; sourceTree = "<group>"; };
+		2789E35F16B6801500CC02C4 /* AKAppSandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKAppSandbox.h; sourceTree = "<group>"; };
+		2789E36016B6801500CC02C4 /* AKAppSandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKAppSandbox.m; sourceTree = "<group>"; };
 		27E5A76716969723008CE289 /* libAkurana.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAkurana.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E5A76A16969723008CE289 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27E5A76E16969723008CE289 /* Akurana-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Akurana-Prefix.pch"; sourceTree = "<group>"; };
@@ -344,6 +357,11 @@
 			isa = PBXGroup;
 			children = (
 				27E5A76F16969723008CE289 /* Akurana.h */,
+				2789E35C16B67FDA00CC02C4 /* AKGlobal.h */,
+				2789E35D16B6801300CC02C4 /* AKAppConfig.h */,
+				2789E35E16B6801400CC02C4 /* AKAppConfig.m */,
+				2789E35F16B6801500CC02C4 /* AKAppSandbox.h */,
+				2789E36016B6801500CC02C4 /* AKAppSandbox.m */,
 				2789E31216B67A5900CC02C4 /* Web */,
 				2789E2D216B674D600CC02C4 /* UI */,
 				272B8CAC169ABBED00DBF54D /* Categories */,
@@ -446,6 +464,8 @@
 				2789E34E16B67BD100CC02C4 /* AKGridViewController.m in Sources */,
 				2789E34F16B67BD100CC02C4 /* AKSegmentedController.m in Sources */,
 				2789E35016B67BD100CC02C4 /* AKSegmentedButton.m in Sources */,
+				2789E36116B6801600CC02C4 /* AKAppConfig.m in Sources */,
+				2789E36216B6801600CC02C4 /* AKAppSandbox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
