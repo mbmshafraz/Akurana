@@ -28,9 +28,33 @@
 - (void)pushViewController:(UIViewController*)controller
     animatedWithTransition:(UIViewAnimationTransition)transition;
 
+- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller;
+
+- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller;
+
+- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller;
+
+- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller;
+
 - (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition
                          withTransitionDuration:(float)duration;
 
 - (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition;
+
+- (void)popViewControllerWithCurlUpTransitionWithDuration:(float)duration;
+- (void)popViewControllerWithCurlUpTransition;
+
+- (void)popViewControllerWithCurlDownTransitionWithDuration:(float)duration;
+- (void)popViewControllerWithCurlDownTransition;
+
+- (void)popViewControllerWithFlipFromLeftTransitionWithDuration:(float)duration;
+- (void)popViewControllerWithFlipFromLeftTransition;
+
+- (void)popViewControllerWithFlipFromRightTransitionWithDuration:(float)duration;
+- (void)popViewControllerWithFlipFromRightTransition;
 
 @end

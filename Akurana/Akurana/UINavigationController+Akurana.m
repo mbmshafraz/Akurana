@@ -19,14 +19,14 @@
 
 #import "UINavigationController+Akurana.h"
 
-#define AK_FLIP_TRANSITION_DURATION 0.7
+#define AK_PUSH_TRANSITION_DURATION 0.7
 
 @implementation UINavigationController (Akurana)
 
 - (void)pushViewController:(UIViewController*)controller
     animatedWithTransition:(UIViewAnimationTransition)transition
 {
-    [self pushViewController:controller animatedWithTransition:transition withTransitionDuration:AK_FLIP_TRANSITION_DURATION];
+    [self pushViewController:controller animatedWithTransition:transition withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
 }
 
 - (void)pushViewController:(UIViewController*)controller
@@ -41,9 +41,49 @@
     [UIView commitAnimations];
 }
 
+- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller withTransitionDuration:(float)duration
+{
+    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionCurlUp withTransitionDuration:duration];
+}
+
+- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller
+{
+    [self pushViewControllerAnimatedWithCurlUpTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller withTransitionDuration:(float)duration
+{
+    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionCurlDown withTransitionDuration:duration];
+}
+
+- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller
+{
+    [self pushViewControllerAnimatedWithCurlDownTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration
+{
+    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionFlipFromLeft withTransitionDuration:duration];
+}
+
+- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller
+{
+    [self pushViewControllerAnimatedWithFlipFromLeftTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration
+{
+    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionFlipFromRight withTransitionDuration:duration];
+}
+
+- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller
+{
+    [self pushViewControllerAnimatedWithFlipFromRightTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
 - (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition
 {
-    [self popViewControllerAnimatedWithTransition:transition withTransitionDuration:AK_FLIP_TRANSITION_DURATION];
+    [self popViewControllerAnimatedWithTransition:transition withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
 }
 
 - (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition withTransitionDuration:(float)duration{
@@ -56,4 +96,45 @@
     [UIView setAnimationTransition:transition forView:self.view cache:YES];
     [UIView commitAnimations];
 }
+
+- (void)popViewControllerWithCurlUpTransitionWithDuration:(float)duration
+{
+    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionCurlUp withTransitionDuration:duration];
+}
+
+- (void)popViewControllerWithCurlUpTransition
+{
+    [self popViewControllerWithCurlUpTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+- (void)popViewControllerWithCurlDownTransitionWithDuration:(float)duration
+{
+    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionCurlDown withTransitionDuration:duration];
+}
+
+- (void)popViewControllerWithCurlDownTransition
+{
+    [self popViewControllerWithCurlDownTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+- (void)popViewControllerWithFlipFromLeftTransitionWithDuration:(float)duration
+{
+    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionFlipFromLeft withTransitionDuration:duration];
+}
+
+- (void)popViewControllerWithFlipFromLeftTransition
+{
+    [self popViewControllerWithFlipFromLeftTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+- (void)popViewControllerWithFlipFromRightTransitionWithDuration:(float)duration
+{
+    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionFlipFromRight withTransitionDuration:duration];
+}
+
+- (void)popViewControllerWithFlipFromRightTransition
+{
+    [self popViewControllerWithFlipFromRightTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
 @end
