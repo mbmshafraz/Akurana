@@ -1,5 +1,5 @@
 //
-//  Akurana.h
+//  AKRSSFeed.h
 //  Akurana
 //
 
@@ -19,28 +19,20 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NSObject+Akurana.h"
-#import "NSString+Akurana.h"
-#import "UIColor+Akurana.h"
-#import "UIImage+Akurana.h"
-#import "UIImageView+Akurana.h"
-#import "UINavigationController+Akurana.h"
-#import "UIToolbar+Akurana.h"
-#import "UIView+Akurana.h"
-#import "NSDate+Akurana.h"
-#import "UIButton+Akurana.h"
-#import "UIApplication+Akurana.h"
+@class AKRSSFeed;
 
-#import "AKHTTPService.h"
-#import "AKRSSFeed.h"
+@protocol AKRSSFeedDelegate <NSObject>
+- (void)didParseFeed:(AKRSSFeed *)feed toStories:(NSArray *)stories;
+- (void)didFailParseFeed:(AKRSSFeed *)feed withError:(NSError *)error;
+@end
 
-#import "AKImageEntity.h"
-#import "AKPageView.h"
-#import "AKGridView.h"
-#import "AKImageView.h"
-#import "AKMapAnnotation.h"
-#import "AKMoreViewController.h"
-#import "AKRoundButton.h"
-#import "AKScrollerbleTextView.h"
-#import "AKTableViewController.h"
-#import "AKTextView.h"
+@interface AKRSSFeed : NSObject <NSXMLParserDelegate> {
+}
+
+@property (nonatomic, copy) NSString *feedURL;
+@property (nonatomic, strong) NSXMLParser *rssParser;
+@property (nonatomic, strong) NSMutableArray *stories;
+
+//- (void)parseFeedWithDelegate:(id)delegate;
+- (void)parseRSSFeedData:(NSData *)data withDelegate:(id<AKRSSFeedDelegate>)delegate;
+@end

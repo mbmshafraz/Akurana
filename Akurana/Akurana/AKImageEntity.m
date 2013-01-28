@@ -17,7 +17,7 @@
  
  */
 
-#import "AKImageItem.h"
+#import "AKImageEntity.h"
 
 @implementation AKImageEntity
 
