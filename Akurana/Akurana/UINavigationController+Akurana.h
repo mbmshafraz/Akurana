@@ -40,6 +40,12 @@
 - (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
 - (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller;
 
+- (void)pushViewControllerAnimatedWithSlideFromRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithSlideFromRightTransition:(UIViewController *)controller;
+
+- (void)pushViewControllerAnimatedWithSlideFromLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithSlideFromLeftTransition:(UIViewController *)controller;
+
 - (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition
                          withTransitionDuration:(float)duration;
 
@@ -56,5 +62,11 @@
 
 - (void)popViewControllerWithFlipFromRightTransitionWithDuration:(float)duration;
 - (void)popViewControllerWithFlipFromRightTransition;
+
+- (void)popViewControllerWithSlideFromLeftTransitionWithDuration:(float)duration;
+- (void)popViewControllerWithSlideFromLeftTransition;
+
+- (void)popViewControllerWithSlideFromRightTransitionWithDuration:(float)duration;
+- (void)popViewControllerWithSlideFromRightTransition;
 
 @end

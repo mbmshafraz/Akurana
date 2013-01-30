@@ -20,6 +20,8 @@
     if (self) {
         UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(back:)];
         self.navigationItem.leftBarButtonItem = backButton;
+        self.view.backgroundColor = [UIColor yellowColor];
+        
     }
     return self;
 }

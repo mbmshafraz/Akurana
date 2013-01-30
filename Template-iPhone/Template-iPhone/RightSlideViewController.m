@@ -1,19 +1,18 @@
 //
-//  FlipViewController.m
+//  RightSlideViewController.m
 //  Template-iPhone
 //
-//  Created by Mohamed Shafraz on 28/01/2013.
+//  Created by Mohamed Shafraz on 30/01/2013.
 //  Copyright (c) 2013 Shafraz Buhary. All rights reserved.
 //
 
-#import <Akurana/Akurana.h>
-#import "FlipViewController.h"
+#import "RightSlideViewController.h"
 
-@interface FlipViewController ()
+@interface RightSlideViewController ()
 
 @end
 
-@implementation FlipViewController
+@implementation RightSlideViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +37,7 @@
 
 - (void)back:(id)sender
 {
-    [self.navigationController popViewControllerWithFlipFromRightTransition];
+    [self.navigationController popViewControllerWithSlideFromRightTransition];
 }
+
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270B4D4216B90FAC00AB6833 /* RightSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B4D4116B90FAC00AB6833 /* RightSlideViewController.m */; };
+		270B4D5116B92BA900AB6833 /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B4D5016B92BA900AB6833 /* LeftSlideViewController.m */; };
 		2789E36C16B696FB00CC02C4 /* AnimatedUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E36B16B696FB00CC02C4 /* AnimatedUIViewController.m */; };
 		2789E36F16B6974300CC02C4 /* CurlUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E36E16B6974300CC02C4 /* CurlUpViewController.m */; };
 		2789E37216B6976600CC02C4 /* FlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E37116B6976600CC02C4 /* FlipViewController.m */; };
@@ -41,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		270B4D4016B90FAC00AB6833 /* RightSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightSlideViewController.h; sourceTree = "<group>"; };
+		270B4D4116B90FAC00AB6833 /* RightSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightSlideViewController.m; sourceTree = "<group>"; };
+		270B4D4F16B92BA900AB6833 /* LeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSlideViewController.h; sourceTree = "<group>"; };
+		270B4D5016B92BA900AB6833 /* LeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSlideViewController.m; sourceTree = "<group>"; };
 		2789E36A16B696FB00CC02C4 /* AnimatedUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedUIViewController.h; sourceTree = "<group>"; };
 		2789E36B16B696FB00CC02C4 /* AnimatedUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedUIViewController.m; sourceTree = "<group>"; };
 		2789E36D16B6974300CC02C4 /* CurlUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurlUpViewController.h; sourceTree = "<group>"; };
@@ -122,6 +128,10 @@
 				2789E36E16B6974300CC02C4 /* CurlUpViewController.m */,
 				2789E37016B6976600CC02C4 /* FlipViewController.h */,
 				2789E37116B6976600CC02C4 /* FlipViewController.m */,
+				270B4D4016B90FAC00AB6833 /* RightSlideViewController.h */,
+				270B4D4116B90FAC00AB6833 /* RightSlideViewController.m */,
+				270B4D4F16B92BA900AB6833 /* LeftSlideViewController.h */,
+				270B4D5016B92BA900AB6833 /* LeftSlideViewController.m */,
 			);
 			path = "Template-iPhone";
 			sourceTree = "<group>";
@@ -245,6 +255,8 @@
 				2789E36C16B696FB00CC02C4 /* AnimatedUIViewController.m in Sources */,
 				2789E36F16B6974300CC02C4 /* CurlUpViewController.m in Sources */,
 				2789E37216B6976600CC02C4 /* FlipViewController.m in Sources */,
+				270B4D4216B90FAC00AB6833 /* RightSlideViewController.m in Sources */,
+				270B4D5116B92BA900AB6833 /* LeftSlideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

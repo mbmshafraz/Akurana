@@ -112,4 +112,23 @@
     self.layer.masksToBounds = YES;
 }
 
+- (UIImage*) capture {
+    UIGraphicsBeginImageContext(self.bounds.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [self.layer renderInContext:context];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
+}
+
+- (UIView *)clone
+{
+    return [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:self]];
+}
+
+- (void) removeAllSubViews
+{
+    [[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
 @end

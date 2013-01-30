@@ -24,6 +24,7 @@
 /*
  * Dials to given number in string formate 
  */
-- (void)dial:(NSString*)number;
++ (void)dial:(NSString*)number;
 
++ (UIImage*)screenshot;
 @end

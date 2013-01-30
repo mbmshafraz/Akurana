@@ -8,6 +8,9 @@
 
 #import "RootViewController.h"
 #import "CurlUpViewController.h"
+#import "FlipViewController.h"
+#import "RightSlideViewController.h"
+#import "LeftSlideViewController.h"
 
 @interface RootViewController ()
 
@@ -50,7 +53,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -67,7 +70,15 @@
         case 0:
             cell.textLabel.text = @"Curl Animation";
             break;
-            
+        case 1:
+            cell.textLabel.text = @"Flip Animation";
+            break;
+        case 2:
+            cell.textLabel.text = @"Slid from right Animation";
+            break;
+        case 3:
+            cell.textLabel.text = @"Slid from left Animation";
+            break;
         default:
             break;
     }
@@ -85,7 +96,25 @@
         case 0:
         {
             CurlUpViewController *viewController = [CurlUpViewController new];
-            [self.navigationController pushViewController:viewController animatedWithTransition:UIViewAnimationTransitionCurlUp];
+            [self.navigationController pushViewControllerAnimatedWithCurlUpTransition:viewController];
+            break;
+        }
+        case 1:
+        {
+            FlipViewController *viewController = [FlipViewController new];
+            [self.navigationController pushViewControllerAnimatedWithFlipFromLeftTransition:viewController];
+            break;
+        }
+        case 2:
+        {
+            RightSlideViewController *viewController = [RightSlideViewController new];
+            [self.navigationController pushViewControllerAnimatedWithSlideFromRightTransition:viewController];
+            break;
+        }
+        case 3:
+        {
+            LeftSlideViewController *viewController = [LeftSlideViewController new];
+            [self.navigationController pushViewControllerAnimatedWithSlideFromLeftTransition:viewController];
             break;
         }
         default:

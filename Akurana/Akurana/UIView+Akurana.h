@@ -33,5 +33,8 @@
 - (void)setBackgroundColorWithImageName:(NSString *)imageName;
 - (void)setBackgroundColorWithImage:(UIImage *)image;
 - (void)setCornerRadius:(CGFloat)value;
+- (UIImage*) capture;
+- (UIView*) clone;
+- (void) removeAllSubViews;
 
 @end
