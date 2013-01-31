@@ -21,6 +21,9 @@
 
 @interface UINavigationController (Akurana)
 
+/*
+ * Pushing view controllers with standed transitions
+ */
 - (void)pushViewController:(UIViewController*)controller
     animatedWithTransition:(UIViewAnimationTransition)transition
     withTransitionDuration:(float)duration;
@@ -28,45 +31,107 @@
 - (void)pushViewController:(UIViewController*)controller
     animatedWithTransition:(UIViewAnimationTransition)transition;
 
-- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
-- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller;
-
-- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
-- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller;
-
-- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
-- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller;
-
-- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
-- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller;
-
-- (void)pushViewControllerAnimatedWithSlideFromRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
-- (void)pushViewControllerAnimatedWithSlideFromRightTransition:(UIViewController *)controller;
-
-- (void)pushViewControllerAnimatedWithSlideFromLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
-- (void)pushViewControllerAnimatedWithSlideFromLeftTransition:(UIViewController *)controller;
-
+/*
+ * Poping view controllers with standed transitions
+ */
 - (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition
                          withTransitionDuration:(float)duration;
 
 - (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition;
 
+/*
+ * Pushing view controllers with Curl up transitions
+ */
+- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller;
+
+/*
+ * Poping view controllers with Curl up transitions
+ */
 - (void)popViewControllerWithCurlUpTransitionWithDuration:(float)duration;
 - (void)popViewControllerWithCurlUpTransition;
 
+/*
+ * Pushing view controllers with Curl down transitions
+ */
+- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller;
+
+/*
+ * Poping view controllers with Curl down transitions
+ */
 - (void)popViewControllerWithCurlDownTransitionWithDuration:(float)duration;
 - (void)popViewControllerWithCurlDownTransition;
 
+/*
+ * Pushing view controllers with Flip from Left transitions
+ */
+- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller;
+
+/*
+ * Poping view controllers with Flip from Left transitions
+ */
 - (void)popViewControllerWithFlipFromLeftTransitionWithDuration:(float)duration;
 - (void)popViewControllerWithFlipFromLeftTransition;
 
+/*
+ * Pushing view controllers with Flip from Right transitions
+ */
+- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller;
+
+/*
+ * Poping view controllers with Flip from Right transitions
+ */
 - (void)popViewControllerWithFlipFromRightTransitionWithDuration:(float)duration;
 - (void)popViewControllerWithFlipFromRightTransition;
 
-- (void)popViewControllerWithSlideFromLeftTransitionWithDuration:(float)duration;
-- (void)popViewControllerWithSlideFromLeftTransition;
+/*
+ * Pushing view controllers with Sliding from Right transitions
+ */
+- (void)pushViewControllerAnimatedWithSlideFromRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithSlideFromRightTransition:(UIViewController *)controller;
 
-- (void)popViewControllerWithSlideFromRightTransitionWithDuration:(float)duration;
-- (void)popViewControllerWithSlideFromRightTransition;
+/*
+ * Poping view controllers with Sliding to Right transitions
+ */
+- (void)popViewControllerWithSlideToRightTransitionWithDuration:(float)duration;
+- (void)popViewControllerWithSlideToRightTransition;
 
+/*
+ * Pushing view controllers with Sliding from Left transitions
+ */
+- (void)pushViewControllerAnimatedWithSlideFromLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithSlideFromLeftTransition:(UIViewController *)controller;
+
+/*
+ * Poping view controllers with Sliding to Left transitions
+ */
+- (void)popViewControllerWithSlideToLeftTransitionWithDuration:(float)duration;
+- (void)popViewControllerWithSlideToLeftTransition;
+
+/*
+ * Pushing view controllers with Sliding Super Controller to Left transitions
+ */
+- (void)pushViewControllerAnimatedWithSlideSuperControllerToLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithSlideSuperControllerToLeftTransition:(UIViewController *)controller;
+
+/*
+ * Poping view controllers with Sliding Super Controller from Left transitions
+ */
+- (void)popViewControllerWithSlideSuperControllerFromLeftTransitionWithDuration:(float)duration;
+- (void)popViewControllerWithSlideSuperControllerFromLeftTransition;
+
+/*
+ * Pushing view controllers with Sliding Super Controller to Left transitions
+ */
+- (void)pushViewControllerAnimatedWithSlideSuperControllerToRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration;
+- (void)pushViewControllerAnimatedWithSlideSuperControllerToRightTransition:(UIViewController *)controller;
+
+/*
+ * Poping view controllers with Sliding Super Controller from Left transitions
+ */
+- (void)popViewControllerWithSlideSuperControllerFromRightTransitionWithDuration:(float)duration;
+- (void)popViewControllerWithSlideSuperControllerFromRightTransition;
 @end

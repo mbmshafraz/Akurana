@@ -7,11 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		270B4D4216B90FAC00AB6833 /* RightSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B4D4116B90FAC00AB6833 /* RightSlideViewController.m */; };
-		270B4D5116B92BA900AB6833 /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B4D5016B92BA900AB6833 /* LeftSlideViewController.m */; };
 		2789E36C16B696FB00CC02C4 /* AnimatedUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E36B16B696FB00CC02C4 /* AnimatedUIViewController.m */; };
-		2789E36F16B6974300CC02C4 /* CurlUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E36E16B6974300CC02C4 /* CurlUpViewController.m */; };
-		2789E37216B6976600CC02C4 /* FlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E37116B6976600CC02C4 /* FlipViewController.m */; };
 		27E5A7B4169697A0008CE289 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5A7B3169697A0008CE289 /* UIKit.framework */; };
 		27E5A7B6169697A0008CE289 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5A7B5169697A0008CE289 /* Foundation.framework */; };
 		27E5A7B8169697A0008CE289 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5A7B7169697A0008CE289 /* CoreGraphics.framework */; };
@@ -43,16 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		270B4D4016B90FAC00AB6833 /* RightSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightSlideViewController.h; sourceTree = "<group>"; };
-		270B4D4116B90FAC00AB6833 /* RightSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightSlideViewController.m; sourceTree = "<group>"; };
-		270B4D4F16B92BA900AB6833 /* LeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSlideViewController.h; sourceTree = "<group>"; };
-		270B4D5016B92BA900AB6833 /* LeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSlideViewController.m; sourceTree = "<group>"; };
 		2789E36A16B696FB00CC02C4 /* AnimatedUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedUIViewController.h; sourceTree = "<group>"; };
 		2789E36B16B696FB00CC02C4 /* AnimatedUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedUIViewController.m; sourceTree = "<group>"; };
-		2789E36D16B6974300CC02C4 /* CurlUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurlUpViewController.h; sourceTree = "<group>"; };
-		2789E36E16B6974300CC02C4 /* CurlUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurlUpViewController.m; sourceTree = "<group>"; };
-		2789E37016B6976600CC02C4 /* FlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipViewController.h; sourceTree = "<group>"; };
-		2789E37116B6976600CC02C4 /* FlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipViewController.m; sourceTree = "<group>"; };
 		27E5A7AF169697A0008CE289 /* Template-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Template-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E5A7B3169697A0008CE289 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27E5A7B5169697A0008CE289 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,14 +112,6 @@
 				27E5A7D116969870008CE289 /* RootViewController.m */,
 				2789E36A16B696FB00CC02C4 /* AnimatedUIViewController.h */,
 				2789E36B16B696FB00CC02C4 /* AnimatedUIViewController.m */,
-				2789E36D16B6974300CC02C4 /* CurlUpViewController.h */,
-				2789E36E16B6974300CC02C4 /* CurlUpViewController.m */,
-				2789E37016B6976600CC02C4 /* FlipViewController.h */,
-				2789E37116B6976600CC02C4 /* FlipViewController.m */,
-				270B4D4016B90FAC00AB6833 /* RightSlideViewController.h */,
-				270B4D4116B90FAC00AB6833 /* RightSlideViewController.m */,
-				270B4D4F16B92BA900AB6833 /* LeftSlideViewController.h */,
-				270B4D5016B92BA900AB6833 /* LeftSlideViewController.m */,
 			);
 			path = "Template-iPhone";
 			sourceTree = "<group>";
@@ -253,10 +233,6 @@
 				27E5A7C4169697A0008CE289 /* AppDelegate.m in Sources */,
 				27E5A7D216969870008CE289 /* RootViewController.m in Sources */,
 				2789E36C16B696FB00CC02C4 /* AnimatedUIViewController.m in Sources */,
-				2789E36F16B6974300CC02C4 /* CurlUpViewController.m in Sources */,
-				2789E37216B6976600CC02C4 /* FlipViewController.m in Sources */,
-				270B4D4216B90FAC00AB6833 /* RightSlideViewController.m in Sources */,
-				270B4D5116B92BA900AB6833 /* LeftSlideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

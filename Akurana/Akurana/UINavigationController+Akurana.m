@@ -25,12 +25,9 @@
 
 @implementation UINavigationController (Akurana)
 
-- (void)pushViewController:(UIViewController*)controller
-    animatedWithTransition:(UIViewAnimationTransition)transition
-{
-    [self pushViewController:controller animatedWithTransition:transition withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
-}
-
+/*
+ * Pushing view controllers with standed transitions
+ */
 - (void)pushViewController:(UIViewController*)controller
     animatedWithTransition:(UIViewAnimationTransition)transition withTransitionDuration:(float)duration{
     
@@ -42,17 +39,152 @@
     }];
 }
 
+- (void)pushViewController:(UIViewController*)controller
+    animatedWithTransition:(UIViewAnimationTransition)transition
+{
+    [self pushViewController:controller animatedWithTransition:transition withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+/*
+ * Poping view controllers with standed transitions
+ */
+- (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition withTransitionDuration:(float)duration{
+    
+    [self popViewControllerAnimated:NO];
+    
+    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionTransitionNone animations:^{
+        [UIView setAnimationTransition:transition forView:self.view cache:YES];
+    } completion:^(BOOL finished) {
+    }];
+}
+
+- (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition
+{
+    [self popViewControllerAnimatedWithTransition:transition withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+/*
+ * Pushing view controllers with Curl up transitions
+ */
+- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller withTransitionDuration:(float)duration
+{
+    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionCurlUp withTransitionDuration:duration];
+}
+
+- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller
+{
+    [self pushViewControllerAnimatedWithCurlUpTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+
+
+/*
+ * Poping view controllers with Curl up transitions
+ */
+- (void)popViewControllerWithCurlUpTransitionWithDuration:(float)duration
+{
+    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionCurlUp withTransitionDuration:duration];
+}
+
+- (void)popViewControllerWithCurlUpTransition
+{
+    [self popViewControllerWithCurlUpTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+/*
+ * Pushing view controllers with Curl down transitions
+ */
+- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller withTransitionDuration:(float)duration
+{
+    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionCurlDown withTransitionDuration:duration];
+}
+
+- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller
+{
+    [self pushViewControllerAnimatedWithCurlDownTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+/*
+ * Poping view controllers with Curl down transitions
+ */
+- (void)popViewControllerWithCurlDownTransitionWithDuration:(float)duration
+{
+    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionCurlDown withTransitionDuration:duration];
+}
+
+- (void)popViewControllerWithCurlDownTransition
+{
+    [self popViewControllerWithCurlDownTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+/*
+ * Pushing view controllers with Flip from Left transitions
+ */
+- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration
+{
+    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionFlipFromLeft withTransitionDuration:duration];
+}
+
+- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller
+{
+    [self pushViewControllerAnimatedWithFlipFromLeftTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+/*
+ * Poping view controllers with Flip from Left transitions
+ */
+- (void)popViewControllerWithFlipFromLeftTransitionWithDuration:(float)duration
+{
+    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionFlipFromLeft withTransitionDuration:duration];
+}
+
+- (void)popViewControllerWithFlipFromLeftTransition
+{
+    [self popViewControllerWithFlipFromLeftTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+
+/*
+ * Pushing view controllers with Flip from Right transitions
+ */
+- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration
+{
+    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionFlipFromRight withTransitionDuration:duration];
+}
+
+- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller
+{
+    [self pushViewControllerAnimatedWithFlipFromRightTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+
+/*
+ * Poping view controllers with Flip from Right transitions
+ */
+- (void)popViewControllerWithFlipFromRightTransitionWithDuration:(float)duration
+{
+    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionFlipFromRight withTransitionDuration:duration];
+}
+
+- (void)popViewControllerWithFlipFromRightTransition
+{
+    [self popViewControllerWithFlipFromRightTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+/*
+ * Pushing view controllers with Sliding from Right transitions
+ */
 - (void)pushViewControllerAnimatedWithSlideFromRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration
 {
     UIView *oldView = [[UIView alloc] initWithFrame:self.view.frame];
     UIImage *image = [UIApplication screenshot];
     
-    //This avoids color change of Status bar while the transition 
+    //This avoids color change of Status bar while the transition
     for (UIView *view in [[self.view clone] subviews]) {
         if ([view isKindOfClass:[UINavigationBar class]]) {
             [oldView addSubview:view];
             break;
-        }        
+        }
     }
     
     [oldView setBackgroundColorWithImage:image];
@@ -73,7 +205,7 @@
             self.view = newView;
         }
     }];
-
+    
 }
 
 - (void)pushViewControllerAnimatedWithSlideFromRightTransition:(UIViewController *)controller;
@@ -81,6 +213,43 @@
     [self pushViewControllerAnimatedWithSlideFromRightTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
 }
 
+
+/*
+ * Poping view controllers with Sliding to Right transitions
+ */
+- (void)popViewControllerWithSlideToRightTransitionWithDuration:(float)duration
+{
+    UIView *oldView = [[UIView alloc] initWithFrame:self.view.frame];
+    UIImage *image = [UIApplication screenshot];
+    
+    [oldView setBackgroundColorWithImage:image];
+    
+    [self popViewControllerAnimated:NO];
+    
+    CGRect frame = oldView.frame;
+    
+    [self.view addSubview:oldView];
+    
+    frame.origin.x = self.view.frame.size.width;
+    
+    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionTransitionNone animations:^{
+        oldView.frame = frame;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [oldView removeFromSuperview];
+        }
+    }];
+}
+
+- (void)popViewControllerWithSlideToRightTransition
+{
+    [self popViewControllerWithSlideToRightTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+
+/*
+ * Pushing view controllers with Sliding from Left transitions
+ */
 - (void)pushViewControllerAnimatedWithSlideFromLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration
 {
     UIView *oldView = [[UIView alloc] initWithFrame:self.view.frame];
@@ -119,102 +288,11 @@
     [self pushViewControllerAnimatedWithSlideFromLeftTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
 }
 
-- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller withTransitionDuration:(float)duration
-{
-    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionCurlUp withTransitionDuration:duration];
-}
 
-- (void)pushViewControllerAnimatedWithCurlUpTransition:(UIViewController *)controller
-{
-    [self pushViewControllerAnimatedWithCurlUpTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
-}
-
-- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller withTransitionDuration:(float)duration
-{
-    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionCurlDown withTransitionDuration:duration];
-}
-
-- (void)pushViewControllerAnimatedWithCurlDownTransition:(UIViewController *)controller
-{
-    [self pushViewControllerAnimatedWithCurlDownTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
-}
-
-- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration
-{
-    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionFlipFromLeft withTransitionDuration:duration];
-}
-
-- (void)pushViewControllerAnimatedWithFlipFromLeftTransition:(UIViewController *)controller
-{
-    [self pushViewControllerAnimatedWithFlipFromLeftTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
-}
-
-- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration
-{
-    [self pushViewController:controller animatedWithTransition:UIViewAnimationTransitionFlipFromRight withTransitionDuration:duration];
-}
-
-- (void)pushViewControllerAnimatedWithFlipFromRightTransition:(UIViewController *)controller
-{
-    [self pushViewControllerAnimatedWithFlipFromRightTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
-}
-
-- (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition
-{
-    [self popViewControllerAnimatedWithTransition:transition withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
-}
-
-- (void)popViewControllerAnimatedWithTransition:(UIViewAnimationTransition)transition withTransitionDuration:(float)duration{
-    
-    [self popViewControllerAnimated:NO];
-    
-    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionTransitionNone animations:^{
-        [UIView setAnimationTransition:transition forView:self.view cache:YES];
-    } completion:^(BOOL finished) {
-    }];
-}
-
-- (void)popViewControllerWithCurlUpTransitionWithDuration:(float)duration
-{
-    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionCurlUp withTransitionDuration:duration];
-}
-
-- (void)popViewControllerWithCurlUpTransition
-{
-    [self popViewControllerWithCurlUpTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
-}
-
-- (void)popViewControllerWithCurlDownTransitionWithDuration:(float)duration
-{
-    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionCurlDown withTransitionDuration:duration];
-}
-
-- (void)popViewControllerWithCurlDownTransition
-{
-    [self popViewControllerWithCurlDownTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
-}
-
-- (void)popViewControllerWithFlipFromLeftTransitionWithDuration:(float)duration
-{
-    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionFlipFromLeft withTransitionDuration:duration];
-}
-
-- (void)popViewControllerWithFlipFromLeftTransition
-{
-    [self popViewControllerWithFlipFromLeftTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
-}
-
-- (void)popViewControllerWithFlipFromRightTransitionWithDuration:(float)duration
-{
-    [self popViewControllerAnimatedWithTransition:UIViewAnimationTransitionFlipFromRight withTransitionDuration:duration];
-}
-
-- (void)popViewControllerWithFlipFromRightTransition
-{
-    [self popViewControllerWithFlipFromRightTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
-}
-
-- (void)popViewControllerWithSlideFromLeftTransitionWithDuration:(float)duration
+/*
+ * Poping view controllers with Sliding to Left transitions
+ */
+- (void)popViewControllerWithSlideToLeftTransitionWithDuration:(float)duration
 {
     
     UIView *oldView = [[UIView alloc] initWithFrame:self.view.frame];
@@ -240,19 +318,97 @@
     
 }
 
-- (void)popViewControllerWithSlideFromLeftTransition
+- (void)popViewControllerWithSlideToLeftTransition
 {
-    [self popViewControllerWithSlideFromLeftTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+    [self popViewControllerWithSlideToLeftTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
 }
 
-- (void)popViewControllerWithSlideFromRightTransitionWithDuration:(float)duration
+/*
+ * Pushing view controllers with Sliding Super Controller to Left transitions
+ */
+- (void)pushViewControllerAnimatedWithSlideSuperControllerToLeftTransition:(UIViewController *)controller withTransitionDuration:(float)duration
 {
     UIView *oldView = [[UIView alloc] initWithFrame:self.view.frame];
     UIImage *image = [UIApplication screenshot];
     
     [oldView setBackgroundColorWithImage:image];
     
+    [self pushViewController:controller animated:NO];
+    
+    CGRect frame = oldView.frame;
+    
+    [self.view addSubview:oldView];
+    
+    frame.origin.x = self.view.frame.size.width * -1.0;
+    
+    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionTransitionNone animations:^{
+        oldView.frame = frame;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [oldView removeFromSuperview];
+        }
+    }];
+}
+
+- (void)pushViewControllerAnimatedWithSlideSuperControllerToLeftTransition:(UIViewController *)controller
+{
+    [self pushViewControllerAnimatedWithSlideSuperControllerToLeftTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+/*
+ * Poping view controllers with Sliding Super Controller to Left transitions
+ */
+- (void)popViewControllerWithSlideSuperControllerFromLeftTransitionWithDuration:(float)duration
+{
+    UIView *oldView = [[UIView alloc] initWithFrame:self.view.frame];
+    UIImage *image = [UIApplication screenshot];
+    
+    //This avoids color change of Status bar while the transition
+    for (UIView *view in [[self.view clone] subviews]) {
+        if ([view isKindOfClass:[UINavigationBar class]]) {
+            [oldView addSubview:view];
+            break;
+        }
+    }
+    
+    [oldView setBackgroundColorWithImage:image];
+    
     [self popViewControllerAnimated:NO];
+    
+    UIView *newView = self.view;
+    self.view = oldView;
+    CGRect frame = newView.frame;
+    frame.origin.x = frame.size.width * -1.0;
+    newView.frame = frame;
+    [self.view addSubview:newView];
+    
+    frame.origin.x = 0;
+    
+    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionTransitionNone animations:^{
+        newView.frame = frame;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            self.view = newView;
+        }
+    }];
+}
+
+- (void)popViewControllerWithSlideSuperControllerFromLeftTransition
+{
+    [self popViewControllerWithSlideSuperControllerFromLeftTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+/*
+ * Pushing view controllers with Sliding Super Controller to Rigth transitions
+ */
+- (void)pushViewControllerAnimatedWithSlideSuperControllerToRightTransition:(UIViewController *)controller withTransitionDuration:(float)duration
+{
+    UIView *oldView = [[UIView alloc] initWithFrame:self.view.frame];
+    UIImage *image = [UIApplication screenshot];
+    
+    [oldView setBackgroundColorWithImage:image];
+    
+    [self pushViewController:controller animated:NO];
     
     CGRect frame = oldView.frame;
     
@@ -269,9 +425,44 @@
     }];
 }
 
-- (void)popViewControllerWithSlideFromRightTransition
+- (void)pushViewControllerAnimatedWithSlideSuperControllerToRightTransition:(UIViewController *)controller
 {
-    [self popViewControllerWithSlideFromRightTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
+    [self pushViewControllerAnimatedWithSlideSuperControllerToRightTransition:controller withTransitionDuration:AK_PUSH_TRANSITION_DURATION];
+}
+
+/*
+ * Poping view controllers with Sliding Super Controller to Left transitions
+ */
+- (void)popViewControllerWithSlideSuperControllerFromRightTransitionWithDuration:(float)duration
+{
+    UIView *oldView = [[UIView alloc] initWithFrame:self.view.frame];
+    UIImage *image = [UIApplication screenshot];
+    
+    [oldView setBackgroundColorWithImage:image];
+    
+    [self popViewControllerAnimated:NO];
+    
+    UIView *newView = self.view;
+    self.view = oldView;
+    CGRect frame = newView.frame;
+    frame.origin.x = frame.size.width;
+    newView.frame = frame;
+    [self.view addSubview:newView];
+    
+    frame.origin.x = 0;
+    
+    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionTransitionNone animations:^{
+        newView.frame = frame;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            self.view = newView;
+        }
+    }];
+}
+
+- (void)popViewControllerWithSlideSuperControllerFromRightTransition
+{
+    [self popViewControllerWithSlideSuperControllerFromRightTransitionWithDuration:AK_PUSH_TRANSITION_DURATION];
 }
 
 @end

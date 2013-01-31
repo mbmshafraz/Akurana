@@ -14,6 +14,8 @@
 
 @implementation AnimatedUIViewController
 
+
+
 - (id)init
 {
     self = [super init];
@@ -36,6 +38,39 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)back:(id)sender
+{
+    switch (_popTransition) {
+        case CurlUp:
+            [self.navigationController popViewControllerWithCurlUpTransition];
+            break;
+        case CurlDown:
+            [self.navigationController popViewControllerWithCurlDownTransition];
+            break;
+        case FlipFromLeft:
+            [self.navigationController popViewControllerWithFlipFromLeftTransition];
+            break;
+        case FlipFromRight:
+            [self.navigationController popViewControllerWithFlipFromRightTransition];
+            break;
+        case SlideToLeft:
+            [self.navigationController popViewControllerWithSlideToLeftTransition];
+            break;
+        case SlideToRight:
+            [self.navigationController popViewControllerWithSlideToRightTransition];
+            break;
+        case SlideSuperFromLeft:
+            [self.navigationController popViewControllerWithSlideSuperControllerFromLeftTransition];
+            break;
+        case SlideSuperFromRight:
+            [self.navigationController popViewControllerWithSlideSuperControllerFromRightTransition];
+            break;
+        default:
+            break;
+    }
 }
 
 @end

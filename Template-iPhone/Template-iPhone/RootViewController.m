@@ -7,10 +7,11 @@
 //
 
 #import "RootViewController.h"
-#import "CurlUpViewController.h"
-#import "FlipViewController.h"
-#import "RightSlideViewController.h"
-#import "LeftSlideViewController.h"
+#import "AnimatedUIViewController.h"
+//#import "CurlUpViewController.h"
+//#import "FlipViewController.h"
+//#import "RightSlideViewController.h"
+//#import "LeftSlideViewController.h"
 
 @interface RootViewController ()
 
@@ -53,7 +54,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,16 +69,25 @@
     
     switch ([indexPath row]) {
         case 0:
-            cell.textLabel.text = @"Curl Animation";
+            cell.textLabel.text = @"Curl Up Animation";
             break;
         case 1:
-            cell.textLabel.text = @"Flip Animation";
+            cell.textLabel.text = @"Curl Down Animation";
             break;
         case 2:
-            cell.textLabel.text = @"Slid from right Animation";
+            cell.textLabel.text = @"Flip Animation";
             break;
         case 3:
+            cell.textLabel.text = @"Slid from right Animation";
+            break;
+        case 4:
             cell.textLabel.text = @"Slid from left Animation";
+            break;
+        case 5:
+            cell.textLabel.text = @"Slid Super to left Animation";
+            break;
+        case 6:
+            cell.textLabel.text = @"Slid Super to right Animation";
             break;
         default:
             break;
@@ -95,26 +105,51 @@
     switch ([indexPath row]) {
         case 0:
         {
-            CurlUpViewController *viewController = [CurlUpViewController new];
+            AnimatedUIViewController *viewController = [AnimatedUIViewController new];
+            viewController.popTransition = CurlDown;
             [self.navigationController pushViewControllerAnimatedWithCurlUpTransition:viewController];
             break;
         }
         case 1:
         {
-            FlipViewController *viewController = [FlipViewController new];
-            [self.navigationController pushViewControllerAnimatedWithFlipFromLeftTransition:viewController];
+            AnimatedUIViewController *viewController = [AnimatedUIViewController new];
+            viewController.popTransition = CurlUp;
+            [self.navigationController pushViewControllerAnimatedWithCurlDownTransition:viewController];
             break;
         }
         case 2:
         {
-            RightSlideViewController *viewController = [RightSlideViewController new];
-            [self.navigationController pushViewControllerAnimatedWithSlideFromRightTransition:viewController];
+            AnimatedUIViewController *viewController = [AnimatedUIViewController new];
+            viewController.popTransition = FlipFromRight;
+            [self.navigationController pushViewControllerAnimatedWithFlipFromLeftTransition:viewController];
             break;
         }
         case 3:
         {
-            LeftSlideViewController *viewController = [LeftSlideViewController new];
+            AnimatedUIViewController *viewController = [AnimatedUIViewController new];
+            viewController.popTransition = SlideToRight;
+            [self.navigationController pushViewControllerAnimatedWithSlideFromRightTransition:viewController];
+            break;
+        }
+        case 4:
+        {
+            AnimatedUIViewController *viewController = [AnimatedUIViewController new];
+            viewController.popTransition = SlideToLeft;
             [self.navigationController pushViewControllerAnimatedWithSlideFromLeftTransition:viewController];
+            break;
+        }
+        case 5:
+        {
+            AnimatedUIViewController *viewController = [AnimatedUIViewController new];
+            viewController.popTransition = SlideSuperFromLeft;
+            [self.navigationController pushViewControllerAnimatedWithSlideSuperControllerToLeftTransition:viewController];
+            break;
+        }
+        case 6:
+        {
+            AnimatedUIViewController *viewController = [AnimatedUIViewController new];
+            viewController.popTransition = SlideSuperFromRight;
+            [self.navigationController pushViewControllerAnimatedWithSlideSuperControllerToRightTransition:viewController];
             break;
         }
         default:
