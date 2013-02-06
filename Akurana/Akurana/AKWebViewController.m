@@ -18,7 +18,7 @@
  */
 
 #import "AKWebViewController.h"
-#import "AKTheme.h"
+#import "AKResource.h"
 #import "UIView+Akurana.h"
 #import "UIToolbar+Akurana.h"
 
@@ -71,24 +71,31 @@
 
 - (void)loadView {  
     [super loadView];
+    self.view.backgroundColor = [UIColor grayColor];
     CGRect frame = [UIScreen mainScreen].applicationFrame;
     
-    webView_ = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, frame.size.height, frame.size.width - 88)];
+    CGFloat webviewHeight = frame.size.height - 44;
+    
+    if ([UIApplication sharedApplication].statusBarHidden) {
+        webviewHeight = webviewHeight - 20.0;
+    }
+    
+    webView_ = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, webviewHeight)];
     webView_.delegate = self;
-    
-    webView_.scalesPageToFit = YES;
+    webView_.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:webView_];
-    
+
     UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc]
                                          initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     [spinner startAnimating];
     activityItem_ = [[UIBarButtonItem alloc] initWithCustomView:spinner];
     
-    backButton_ = [[UIBarButtonItem alloc] initWithImage:[AKTheme getImage:@"backIcon.png"]
+    backButton_ = [[UIBarButtonItem alloc] initWithImage:[AKResource getImage:@"backIcon.png"]
                                                    style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
+
     backButton_.tag = 2;
     backButton_.enabled = NO;
-    forwardButton_ = [[UIBarButtonItem alloc] initWithImage:[AKTheme getImage:@"forwardIcon.png"]
+    forwardButton_ = [[UIBarButtonItem alloc] initWithImage:[AKResource getImage:@"forwardIcon.png"]
                                                       style:UIBarButtonItemStylePlain target:self action:@selector(forwardAction)];
     forwardButton_.tag = 1;
     forwardButton_.enabled = NO;
@@ -103,12 +110,13 @@
     
     UIBarItem* space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:
                          UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    
-    toolbar_ = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 44, self.view.frame.size.height, 44)];
-    toolbar_.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+
+    toolbar_ = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 44, self.view.frame.size.width, 44)];
+    toolbar_.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
     toolbar_.tintColor = self.navigationController.navigationBar.tintColor; 
 
     toolbar_.items = @[space,backButton_, forwardButton_, refreshButton_, actionButton, space];
+    
     [self.view addSubview:toolbar_];
 }
 
@@ -187,6 +195,11 @@
             docView.height += headerView.height; 
         }
     }
+}
+
+- (void)openStringURL:(NSString*)url
+{
+    [self openURL:[NSURL URLWithString:url]];
 }
 
 - (void)openURL:(NSURL*)url {

@@ -8,10 +8,7 @@
 
 #import "RootViewController.h"
 #import "AnimatedUIViewController.h"
-//#import "CurlUpViewController.h"
-//#import "FlipViewController.h"
-//#import "RightSlideViewController.h"
-//#import "LeftSlideViewController.h"
+#import <Akurana/Akurana.h>
 
 @interface RootViewController ()
 
@@ -54,7 +51,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 7;
+    return 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -88,6 +85,9 @@
             break;
         case 6:
             cell.textLabel.text = @"Slid Super to right Animation";
+            break;
+        case 7:
+            cell.textLabel.text = @"Web View";
             break;
         default:
             break;
@@ -150,6 +150,13 @@
             AnimatedUIViewController *viewController = [AnimatedUIViewController new];
             viewController.popTransition = SlideSuperFromRight;
             [self.navigationController pushViewControllerAnimatedWithSlideSuperControllerToRightTransition:viewController];
+            break;
+        }
+        case 7:
+        {
+            AKWebViewController *viewController = [AKWebViewController new];
+            [viewController openStringURL:@"http://google.com"];
+            [self.navigationController pushViewController:viewController animated:YES];
             break;
         }
         default:

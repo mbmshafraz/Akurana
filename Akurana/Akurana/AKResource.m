@@ -1,8 +1,7 @@
 //
-//  AKWebViewController.h
+//  AKResource.m
 //  Akurana
 //
-
 /*
  
  Copyright (c) 2012, Shafraz Buhary
@@ -17,24 +16,53 @@
  
  */
 
-#import <UIKit/UIKit.h>
-#import "AKViewController.h"
+#import "AKResource.h"
 
-@interface AKWebViewController : AKViewController <UIWebViewDelegate, UIActionSheetDelegate> {
-    UIWebView* webView_;
-    UIToolbar* toolbar_;
-    UIBarButtonItem* backButton_;
-    UIBarButtonItem* forwardButton_;
-    UIBarButtonItem* refreshButton_;
-    UIBarButtonItem* stopButton_;
-    UIBarButtonItem* activityItem_;
+static AKResource *sharedResource = nil;
+
+@interface AKResource()
+
+@property (nonatomic, strong, readwrite) NSString *rootPath;
+
++ (NSString *)getImagePath:(NSString *)name;
+
+@end
+
+@implementation AKResource
+
++ (AKResource *)sharedResource
+{
+    @synchronized(self) {
+        if (sharedResource == nil) {
+            sharedResource = [self new];
+        }
+    }
+    
+    return sharedResource;
 }
 
-@property(nonatomic, strong, readonly) NSURL* url;
-@property(nonatomic, strong) UIView* headerView;
+- (id)init
+{
+	if (self = [super init])
+    {
+		self.rootPath = [[[NSBundle mainBundle] pathForResource:@"Akurana"
+                                                         ofType:@"bundle"]
+                         stringByAppendingString:@"/"];
+        NSAssert(_rootPath, @"Akurana.budnle not found, Please add the bundle to your main project from Resource folder of Akurana Library");
+	}
+	
+	return self;
+}
 
-- (void)openStringURL:(NSString*)url;
-- (void)openURL:(NSURL*)url;
-- (void)openRequest:(NSURLRequest*)request;
++ (NSString *)getImagePath:(NSString *)name
+{
+    
+    return [NSString stringWithFormat:@"%@images/%@",[AKResource sharedResource].rootPath,name];
+}
 
++ (UIImage *)getImage:(NSString *)name
+{
+    //return [UIImage imageWithContentsOfFile:[AKResource getImagePath:name]];
+    return [UIImage imageWithContentsOfFile:[AKResource getImagePath:name]];
+}
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2789E36C16B696FB00CC02C4 /* AnimatedUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2789E36B16B696FB00CC02C4 /* AnimatedUIViewController.m */; };
+		27CDAA7B16C23D4700D3F471 /* Akurana.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 27CDAA7A16C23D4700D3F471 /* Akurana.bundle */; };
 		27E5A7B4169697A0008CE289 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5A7B3169697A0008CE289 /* UIKit.framework */; };
 		27E5A7B6169697A0008CE289 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5A7B5169697A0008CE289 /* Foundation.framework */; };
 		27E5A7B8169697A0008CE289 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E5A7B7169697A0008CE289 /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		2789E36A16B696FB00CC02C4 /* AnimatedUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedUIViewController.h; sourceTree = "<group>"; };
 		2789E36B16B696FB00CC02C4 /* AnimatedUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedUIViewController.m; sourceTree = "<group>"; };
+		27CDAA7A16C23D4700D3F471 /* Akurana.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Akurana.bundle; path = ../Akurana/Resource/Akurana.bundle; sourceTree = "<group>"; };
 		27E5A7AF169697A0008CE289 /* Template-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Template-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E5A7B3169697A0008CE289 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27E5A7B5169697A0008CE289 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +79,7 @@
 		27E5A7A4169697A0008CE289 = {
 			isa = PBXGroup;
 			children = (
+				27CDAA7A16C23D4700D3F471 /* Akurana.bundle */,
 				27E5A7D71696A8A7008CE289 /* Lib */,
 				27E5A7B9169697A0008CE289 /* Template-iPhone */,
 				27E5A7BA169697A0008CE289 /* Supporting Files */,
@@ -219,6 +222,7 @@
 				27E5A7C6169697A0008CE289 /* Default.png in Resources */,
 				27E5A7C8169697A0008CE289 /* Default@2x.png in Resources */,
 				27E5A7CA169697A0008CE289 /* Default-568h@2x.png in Resources */,
+				27CDAA7B16C23D4700D3F471 /* Akurana.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,8 +27,8 @@
 
 @interface AKTheme : NSObject
 
-@property (nonatomic, retain, readonly) NSDictionary *config;
-@property (nonatomic, retain) NSString *rootPath;
+@property (nonatomic, strong, readonly) NSDictionary *config;
+@property (nonatomic, strong, readonly) NSString *rootPath;
 
 + (AKTheme *)sharedTheme;
 + (NSString *)getImagePath:(NSString *)name;

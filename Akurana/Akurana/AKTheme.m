@@ -24,7 +24,8 @@
 static AKTheme *sharedTheme = nil;
 
 @interface AKTheme ()
-@property (nonatomic, retain, readwrite) NSDictionary *config;
+@property (nonatomic, strong, readwrite) NSDictionary *config;
+@property (nonatomic, strong, readwrite) NSString *rootPath;
 @end
 
 @implementation AKTheme

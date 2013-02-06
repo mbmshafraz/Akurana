@@ -1,8 +1,7 @@
 //
-//  AKWebViewController.h
+//  AKResource.h
 //  Akurana
 //
-
 /*
  
  Copyright (c) 2012, Shafraz Buhary
@@ -17,24 +16,14 @@
  
  */
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "AKViewController.h"
 
-@interface AKWebViewController : AKViewController <UIWebViewDelegate, UIActionSheetDelegate> {
-    UIWebView* webView_;
-    UIToolbar* toolbar_;
-    UIBarButtonItem* backButton_;
-    UIBarButtonItem* forwardButton_;
-    UIBarButtonItem* refreshButton_;
-    UIBarButtonItem* stopButton_;
-    UIBarButtonItem* activityItem_;
-}
+@interface AKResource : NSObject
 
-@property(nonatomic, strong, readonly) NSURL* url;
-@property(nonatomic, strong) UIView* headerView;
+@property (nonatomic, strong, readonly) NSString *rootPath;
 
-- (void)openStringURL:(NSString*)url;
-- (void)openURL:(NSURL*)url;
-- (void)openRequest:(NSURLRequest*)request;
++ (AKResource *)sharedResource;
++ (UIImage *)getImage:(NSString *)name;
 
 @end
