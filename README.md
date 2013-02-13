@@ -2,7 +2,7 @@ Akurana
 =======
 
 Akurana is open source iOS Library/Framework developed by Shafraz Buhary to make your life easy. This library contain Categories which most of the time short cuts for some functions. You can use directly rather than writing many lines of codes. Also this library contain custom UIs and Classes they are required frequently. This library is growing since it is being developed.
-The library named by the vilage where the developer born
+The library named by the name of vilage where the developer born
 
  Copyright (c) 2012, Shafraz Buhary
  All rights reserved.
